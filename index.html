@@ -1,12 +1,212 @@
-make a html with titels then teh code so:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Shop Configurations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0f172a;
+            --bg-surface: #1e293b;
+            --bg-surface-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-primary: #3b82f6;
+            --accent-hover: #2563eb;
+            --success: #10b981;
+            --border-color: #334155;
+            
+            /* Syntax Highlighting Colors */
+            --sh-key: #7dd3fc;
+            --sh-string: #a7f3d0;
+            --sh-number: #fde047;
+            --sh-boolean: #f472b6;
+            --sh-null: #cbd5e1;
+        }
 
-{title}
-[code goes here]
-[copy code button]
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-i will upload each file and u make the html each file must be a seprated code and named different
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
 
-{
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .config-card {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .config-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(15, 23, 42, 0.4);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--accent-primary);
+            border-radius: 4px;
+        }
+
+        .code-container {
+            position: relative;
+            background-color: #0d1117;
+        }
+
+        pre {
+            margin: 0;
+            padding: 1.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Custom Scrollbar for Pre */
+        pre::-webkit-scrollbar {
+            height: 8px;
+            width: 8px;
+        }
+        pre::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.2);
+        }
+        pre::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+        pre::-webkit-scrollbar-thumb:hover {
+            background: var(--text-secondary);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--bg-surface);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--bg-surface-hover);
+            border-color: var(--text-secondary);
+        }
+
+        .copy-btn.copied {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border-color: var(--success);
+        }
+
+        .copy-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* Syntax Highlighting Classes */
+        .sh-key { color: var(--sh-key); }
+        .sh-string { color: var(--sh-string); }
+        .sh-number { color: var(--sh-number); }
+        .sh-boolean { color: var(--sh-boolean); }
+        .sh-null { color: var(--sh-null); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .card-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .copy-btn { top: 0.75rem; right: 0.75rem; padding: 0.4rem 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Generator Shop Configs</h1>
+            <p>Collection of UI JSON configurations for Minecraft Bedrock menus</p>
+        </header>
+
+        <main id="configs-container">
+            <!-- Content injected via JS -->
+        </main>
+    </div>
+
+    <script>
+        const configs = [
+            {
+                title: "Log Generators",
+                filename: "log_generators.json",
+                code: `{
   "name": "§aLog Generators",
   "body": "§7All logs cost $500",
   "layout": 4,
@@ -122,12 +322,12 @@ i will upload each file and u make the html each file must be a seprated code an
     }
   ],
   "scriptevent": "genshop"
-}
-this was the log gens
-
-
-next is minerals:
-{
+}`
+            },
+            {
+                title: "Stone & Minerals",
+                filename: "stone_minerals.json",
+                code: `{
   "name": "Stone & Minerals",
   "body": "§7Stone generators for building and progression",
   "layout": 4,
@@ -315,10 +515,12 @@ next is minerals:
       "id": 1020
     }
   ]
-}
-
-next ores:
-{
+}`
+            },
+            {
+                title: "Ores",
+                filename: "ores.json",
+                code: `{
   "name": "Ores",
   "body": "§7Ore generators for progression & income",
   "layout": 4,
@@ -397,7 +599,6 @@ next ores:
       "buyButtonScoreboard": "money",
       "id": 2008
     },
-
     {
       "text": "Diamond Ore Gen",
       "subtext": "$10,000",
@@ -416,7 +617,6 @@ next ores:
       "buyButtonScoreboard": "money",
       "id": 2010
     },
-
     {
       "text": "Deepslate Coal Ore Gen",
       "subtext": "$3,000",
@@ -490,10 +690,12 @@ next ores:
       "id": 2018
     }
   ]
-}
-
-building blocks n bricks:
-{
+}`
+            },
+            {
+                title: "Building Blocks & Bricks",
+                filename: "building_blocks.json",
+                code: `{
   "name": "Building Blocks & Bricks",
   "body": "§7Mid-tier building materials & progression blocks",
   "layout": 4,
@@ -663,18 +865,12 @@ building blocks n bricks:
       "id": 3018
     }
   ]
-}
-
-
-
-
-
-
-
-
-
-shulkers:
-{
+}`
+            },
+            {
+                title: "Shulker Boxes",
+                filename: "shulker_boxes.json",
+                code: `{
   "name": "Shulker Boxes",
   "body": "§7High-tier storage generators (endgame items)",
   "layout": 4,
@@ -817,11 +1013,12 @@ shulkers:
       "id": 4015
     }
   ]
-}
-
-
-next is
-{
+}`
+            },
+            {
+                title: "Nature & Terrain",
+                filename: "nature_terrain.json",
+                code: `{
   "name": "Nature & Terrain",
   "body": "§7Natural blocks & utility terrain generators",
   "layout": 4,
@@ -991,11 +1188,12 @@ next is
       "id": 5018
     }
   ]
-}
-
-
-next is concrete and concrete powder:
-{
+}`
+            },
+            {
+                title: "Concrete & Powder",
+                filename: "concrete.json",
+                code: `{
   "name": "Concrete & Powder",
   "body": "§7Building blocks for modern builds & bulk farming",
   "layout": 4,
@@ -1119,7 +1317,6 @@ next is concrete and concrete powder:
       "buyButtonScoreboard": "money",
       "id": 6013
     },
-
     {
       "text": "White Concrete Powder Gen",
       "subtext": "$2,800",
@@ -1166,12 +1363,12 @@ next is concrete and concrete powder:
       "id": 6024
     }
   ]
-}
-
-
-
-finally milisous and specila shop or wtv its spelt as:
-{
+}`
+            },
+            {
+                title: "Special Blocks",
+                filename: "special_blocks.json",
+                code: `{
   "name": "Special Blocks",
   "body": "§7Endgame & utility generator blocks",
   "layout": 4,
@@ -1251,4 +1448,75 @@ finally milisous and specila shop or wtv its spelt as:
       "id": 7008
     }
   ]
-}
+}`
+            }
+        ];
+
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                let cls = 'sh-number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'sh-key';
+                    } else {
+                        cls = 'sh-string';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'sh-boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'sh-null';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+        }
+
+        const copyIcon = `<svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>`;
+        const checkIcon = `<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>`;
+
+        const container = document.getElementById('configs-container');
+
+        configs.forEach((config, index) => {
+            const card = document.createElement('div');
+            card.className = 'config-card';
+
+            const highlightedCode = syntaxHighlight(config.code);
+
+            card.innerHTML = `
+                <div class="card-header">
+                    <div class="card-title">${config.title}</div>
+                    <div style="color: var(--text-secondary); font-size: 0.875rem; font-family: monospace;">${config.filename}</div>
+                </div>
+                <div class="code-container">
+                    <button class="copy-btn" onclick="copyCode(this, ${index})">
+                        ${copyIcon} Copy Code
+                    </button>
+                    <pre><code>${highlightedCode}</code></pre>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+
+        function copyCode(button, index) {
+            const codeToCopy = configs[index].code;
+            
+            navigator.clipboard.writeText(codeToCopy).then(() => {
+                const originalHTML = `${copyIcon} Copy Code`;
+                button.innerHTML = `${checkIcon} Copied!`;
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+                button.innerHTML = 'Failed to copy';
+                setTimeout(() => {
+                    button.innerHTML = `${copyIcon} Copy Code`;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
