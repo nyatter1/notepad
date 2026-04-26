@@ -204,125 +204,183 @@
     <script>
         const configs = [
             {
-                title: "Log Generators",
-                filename: "log_generators.json",
-                code: `{
-  "name": "§aLog Generators",
-  "body": "§7All logs cost $500",
-  "layout": 4,
-  "type": 0,
-  "buttons": [
-    {
-      "text": "§6Acacia Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:acacia_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 101
-    },
-    {
-      "text": "§fBirch Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:birch_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 102
-    },
-    {
-      "text": "§dCherry Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:cherry_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 103
-    },
-    {
-      "text": "§cCrimson Stem Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:crimson_stem_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 104
-    },
-    {
-      "text": "§8Dark Oak Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:dark_oak_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 105
-    },
-    {
-      "text": "§aJungle Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:jungle_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 106
-    },
-    {
-      "text": "§4Mangrove Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:mangrove_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 107
-    },
-    {
-      "text": "§2Oak Leaves Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:oak_leaves_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 108
-    },
-    {
-      "text": "§6Oak Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:oak_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 109
-    },
-    {
-      "text": "§ePale Oak Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:pale_oak_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 110
-    },
-    {
-      "text": "§9Spruce Log Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:spruce_log_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 111
-    },
-    {
-      "text": "§bWarped Stem Gen",
-      "subtext": "§7$500",
-      "actions": ["/give @p msc:warped_stem_gen"],
-      "buyButtonEnabled": true,
-      "buyButtonPrice": 500,
-      "buyButtonScoreboard": "money",
-      "id": 112
-    }
-  ],
-  "scriptevent": "genshop"
-}`
+                {
+  "id": 1740165363959,
+  "data": {
+    "name": "§l§fMARKET §8- §cNEW PRICES",
+    "body": "§8buy random stuff in the market",
+    "layout": 4,
+    "type": 0,
+    "buttons": [
+      {
+        "text": "§l§hSTARTER KIT",
+        "subtext": "§8>> §aFREE! §8<<",
+        "action": "/give @p diamond_sword",
+        "actions": [
+          "/give @p diamond_sword"
+        ],
+        "iconID": "vanilla/iron_sword",
+        "iconOverrides": [],
+        "requiredTag": "",
+        "nutUIColorCondition": "",
+        "nutUIHeaderButton": false,
+        "nutUIHalf": 0,
+        "nutUINoSizeKey": false,
+        "nutUIAlt": false,
+        "disabled": false,
+        "id": 0
+      },
+      {
+        "text": "§l§5EPIC CRATE",
+        "subtext": "§8coming soon!",
+        "action": "/say §8comming soon!",
+        "actions": [
+          "/say §8comming soon!"
+        ],
+        "iconOverrides": [],
+        "requiredTag": "",
+        "displayOverrides": [],
+        "sellButtonEnabled": false,
+        "sellButtonItem": "minecraft:coal",
+        "sellButtonItemCount": 4,
+        "sellButtonPrice": 20,
+        "buyButtonEnabled": false,
+        "buyButtonItem": "",
+        "buyButtonPrice": 20,
+        "buyButtonScoreboard": "money",
+        "nutUIColorCondition": "",
+        "nutUIHeaderButton": false,
+        "nutUIHalf": 1,
+        "nutUINoSizeKey": true,
+        "nutUIAlt": false,
+        "disabled": true,
+        "id": 1
+      },
+      {
+        "text": "§l§cbuy for sale",
+        "subtext": "§8>>§e end in 1 day §8<<",
+        "action": "/tag @p add house",
+        "actions": [
+          "/tag @p add house"
+        ],
+        "iconOverrides": [],
+        "requiredTag": "",
+        "displayOverrides": [],
+        "sellButtonEnabled": false,
+        "sellButtonItem": "minecraft:coal",
+        "sellButtonItemCount": 4,
+        "sellButtonPrice": 20,
+        "buyButtonEnabled": false,
+        "buyButtonItem": "",
+        "buyButtonPrice": 20,
+        "buyButtonScoreboard": "money",
+        "nutUIColorCondition": "",
+        "nutUIHeaderButton": false,
+        "nutUIHalf": 2,
+        "nutUINoSizeKey": false,
+        "nutUIAlt": false,
+        "disabled": false,
+        "id": 2
+      },
+      {
+        "type": "group",
+        "buttons": [
+          {
+            "text": "§dCUSTOM TOOLS",
+            "subtext": "",
+            "action": "/execute at @p run scirptevent leaf:open randomui",
+            "iconID": "leaf/image-0867",
+            "requiredTag": "",
+            "displayOverrides": [],
+            "disabled": false,
+            "id": 4,
+            "actions": [
+              "/execute at @p run scirptevent leaf:open randomui"
+            ]
+          },
+          {
+            "text": "§gMISC",
+            "subtext": "",
+            "action": "/execute at @p run scriptevent leaf:open shop1",
+            "iconID": "leaf/image-0901",
+            "requiredTag": "",
+            "displayOverrides": [],
+            "disabled": false,
+            "id": 5,
+            "actions": [
+              "/execute at @p run scriptevent leaf:open shop1"
+            ]
+          },
+          {
+            "text": "§l§bBATTLE PASS",
+            "subtext": "",
+            "action": "/execute at @p run scriptevent leaf:open battlepass",
+            "iconID": "leaf/image-0894",
+            "requiredTag": "",
+            "displayOverrides": [],
+            "disabled": false,
+            "id": 6,
+            "actions": [
+              "/execute at @p run scriptevent leaf:open battlepass"
+            ]
+          }
+        ],
+        "buttonRow": true,
+        "id": 3
+      },
+      {
+        "text": "§l§eauction house",
+        "subtext": "§8>> §din beta! §8<<",
+        "action": "/scriptevent leaf:open ah",
+        "actions": [
+          "/scriptevent leaf:open ah"
+        ],
+        "iconOverrides": [],
+        "requiredTag": "",
+        "displayOverrides": [],
+        "sellButtonEnabled": false,
+        "sellButtonItem": "minecraft:coal",
+        "sellButtonItemCount": 4,
+        "sellButtonPrice": 20,
+        "buyButtonEnabled": false,
+        "buyButtonItem": "",
+        "buyButtonPrice": 20,
+        "buyButtonScoreboard": "money",
+        "nutUIColorCondition": "",
+        "nutUIHeaderButton": false,
+        "nutUIHalf": 0,
+        "nutUINoSizeKey": false,
+        "nutUIAlt": false,
+        "disabled": false,
+        "id": 7
+      },
+      {
+        "text": "§gbug report",
+        "subtext": "",
+        "action": "/say §cbugs",
+        "actions": [
+          "/say §cbugs"
+        ],
+        "iconID": "leaf/image-0871",
+        "iconOverrides": [],
+        "requiredTag": "",
+        "nutUIColorCondition": "",
+        "nutUIHeaderButton": true,
+        "nutUIHalf": 1,
+        "nutUINoSizeKey": false,
+        "nutUIAlt": false,
+        "disabled": false,
+        "id": 8
+      }
+    ],
+    "subuis": {},
+    "scriptevent": "market",
+    "lastID": 8,
+    "theme": 7
+  },
+  "createdAt": 1740165363959,
+  "updatedAt": 1740167180637
+}
             },
             {
                 title: "Stone & Minerals",
