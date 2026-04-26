@@ -1,1 +1,3029 @@
-https://ai.studio/apps/0d1d6b3d-7eaa-4edf-8bd0-6e13c2ce2571?fullscreenApplet=true
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Stash</title>
+    <style>
+        /* Modern Dark Theme */
+        body { font-family: 'Consolas', monospace; background: #121212; color: #e0e0e0; padding: 30px; }
+        nav { margin-bottom: 20px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+        
+        /* Navigation Buttons */
+        button { 
+            padding: 12px 18px; cursor: pointer; border: 1px solid #333; border-radius: 6px;
+            background: #1e1e1e; color: #aaa; transition: 0.2s ease; font-weight: bold;
+        }
+        button:hover { background: #2d2d2d; color: #fff; }
+        button.active-btn { background: #007ACC; color: white; border-color: #007ACC; }
+        
+        /* The Copy Button */
+        .copy-btn { background: #2ea44f; color: white; margin-left: auto; border: none; }
+        .copy-btn:hover { background: #2c974b; }
+
+        /* Code Container */
+        .code-container { 
+            background: #000; border: 1px solid #333; border-radius: 8px; 
+            padding: 25px; overflow-x: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        pre { margin: 0; white-space: pre-wrap; word-wrap: break-word; }
+        code { line-height: 1.6; color: #9cdcfe; }
+
+        /* Display Logic */
+        .page { display: none; }
+        .active-page { display: block; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button class="nav-btn active-btn" onclick="showPage('page1', this)">Page 1</button>
+        <button class="nav-btn" onclick="showPage('page2', this)">Page 2</button>
+        <button class="nav-btn" onclick="showPage('page3', this)">Page 3</button>
+        <button class="nav-btn" onclick="showPage('page4', this)">Page 4</button>
+        
+        <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+    </nav>
+
+    <div class="code-container">
+        <div id="page1" class="page active-page">
+<pre><code>{
+  "name": "Gens 1",
+  "body": "Select a generator to purchase",
+  "layout": 4,
+  "type": 0,
+  "buttons": [
+    {
+      "text": "Dirt Gen",
+      "subtext": "$100",
+      "action": "/give @p msc:dirt_gen 1",
+      "actions": [
+        "/give @p msc:dirt_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 100,
+      "buyButtonScoreboard": "money",
+      "id": 60673687457
+    },
+    {
+      "text": "Grass Block Gen",
+      "subtext": "$400",
+      "action": "/give @p msc:grass_block_gen 1",
+      "actions": [
+        "/give @p msc:grass_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 400,
+      "buyButtonScoreboard": "money",
+      "id": 89601626922
+    },
+    {
+      "text": "Podzol Gen",
+      "subtext": "$700",
+      "action": "/give @p msc:podzol_gen 1",
+      "actions": [
+        "/give @p msc:podzol_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 700,
+      "buyButtonScoreboard": "money",
+      "id": 39405482546
+    },
+    {
+      "text": "Mycelium Gen",
+      "subtext": "$1,000",
+      "action": "/give @p msc:mycelium_gen 1",
+      "actions": [
+        "/give @p msc:mycelium_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 1000,
+      "buyButtonScoreboard": "money",
+      "id": 16570144527
+    },
+    {
+      "text": "Dirt With Roots Gen",
+      "subtext": "$1,300",
+      "action": "/give @p msc:dirt_with_roots_gen 1",
+      "actions": [
+        "/give @p msc:dirt_with_roots_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 1300,
+      "buyButtonScoreboard": "money",
+      "id": 21058563975
+    },
+    {
+      "text": "Sand Gen",
+      "subtext": "$1,600",
+      "action": "/give @p msc:sand_gen 1",
+      "actions": [
+        "/give @p msc:sand_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 1600,
+      "buyButtonScoreboard": "money",
+      "id": 95460207244
+    },
+    {
+      "text": "Red Sand Gen",
+      "subtext": "$1,900",
+      "action": "/give @p msc:red_sand_gen 1",
+      "actions": [
+        "/give @p msc:red_sand_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 1900,
+      "buyButtonScoreboard": "money",
+      "id": 93829199826
+    },
+    {
+      "text": "Gravel Gen",
+      "subtext": "$2,200",
+      "action": "/give @p msc:gravel_gen 1",
+      "actions": [
+        "/give @p msc:gravel_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 2200,
+      "buyButtonScoreboard": "money",
+      "id": 41150129605
+    },
+    {
+      "text": "Clay Gen",
+      "subtext": "$2,500",
+      "action": "/give @p msc:clay_gen 1",
+      "actions": [
+        "/give @p msc:clay_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 2500,
+      "buyButtonScoreboard": "money",
+      "id": 25308459623
+    },
+    {
+      "text": "Mud Gen",
+      "subtext": "$2,800",
+      "action": "/give @p msc:mud_gen 1",
+      "actions": [
+        "/give @p msc:mud_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 2800,
+      "buyButtonScoreboard": "money",
+      "id": 40232163623
+    },
+    {
+      "text": "Packed Mud Gen",
+      "subtext": "$3,100",
+      "action": "/give @p msc:packed_mud_gen 1",
+      "actions": [
+        "/give @p msc:packed_mud_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 3100,
+      "buyButtonScoreboard": "money",
+      "id": 14881398993
+    },
+    {
+      "text": "Mud Bricks Gen",
+      "subtext": "$3,400",
+      "action": "/give @p msc:mud_bricks_gen 1",
+      "actions": [
+        "/give @p msc:mud_bricks_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 3400,
+      "buyButtonScoreboard": "money",
+      "id": 15924635645
+    },
+    {
+      "text": "Moss Block Gen",
+      "subtext": "$3,700",
+      "action": "/give @p msc:moss_block_gen 1",
+      "actions": [
+        "/give @p msc:moss_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 3700,
+      "buyButtonScoreboard": "money",
+      "id": 87588534577
+    },
+    {
+      "text": "Pale Moss Block Gen",
+      "subtext": "$4,000",
+      "action": "/give @p msc:pale_moss_block_gen 1",
+      "actions": [
+        "/give @p msc:pale_moss_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 4000,
+      "buyButtonScoreboard": "money",
+      "id": 75645597483
+    },
+    {
+      "text": "Oak Log Gen",
+      "subtext": "$4,300",
+      "action": "/give @p msc:oak_log_gen 1",
+      "actions": [
+        "/give @p msc:oak_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 4300,
+      "buyButtonScoreboard": "money",
+      "id": 38133930504
+    },
+    {
+      "text": "Spruce Log Gen",
+      "subtext": "$4,600",
+      "action": "/give @p msc:spruce_log_gen 1",
+      "actions": [
+        "/give @p msc:spruce_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 4600,
+      "buyButtonScoreboard": "money",
+      "id": 81241934722
+    },
+    {
+      "text": "Birch Log Gen",
+      "subtext": "$4,900",
+      "action": "/give @p msc:birch_log_gen 1",
+      "actions": [
+        "/give @p msc:birch_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 4900,
+      "buyButtonScoreboard": "money",
+      "id": 63854655673
+    },
+    {
+      "text": "Jungle Log Gen",
+      "subtext": "$5,200",
+      "action": "/give @p msc:jungle_log_gen 1",
+      "actions": [
+        "/give @p msc:jungle_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 5200,
+      "buyButtonScoreboard": "money",
+      "id": 24007672711
+    },
+    {
+      "text": "Acacia Log Gen",
+      "subtext": "$5,500",
+      "action": "/give @p msc:acacia_log_gen 1",
+      "actions": [
+        "/give @p msc:acacia_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 5500,
+      "buyButtonScoreboard": "money",
+      "id": 38299303606
+    },
+    {
+      "text": "Dark Oak Log Gen",
+      "subtext": "$5,800",
+      "action": "/give @p msc:dark_oak_log_gen 1",
+      "actions": [
+        "/give @p msc:dark_oak_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 5800,
+      "buyButtonScoreboard": "money",
+      "id": 48230963117
+    },
+    {
+      "text": "Mangrove Log Gen",
+      "subtext": "$6,100",
+      "action": "/give @p msc:mangrove_log_gen 1",
+      "actions": [
+        "/give @p msc:mangrove_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 6100,
+      "buyButtonScoreboard": "money",
+      "id": 91433409565
+    },
+    {
+      "text": "Cherry Log Gen",
+      "subtext": "$6,400",
+      "action": "/give @p msc:cherry_log_gen 1",
+      "actions": [
+        "/give @p msc:cherry_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 6400,
+      "buyButtonScoreboard": "money",
+      "id": 49764930474
+    },
+    {
+      "text": "Pale Oak Log Gen",
+      "subtext": "$6,700",
+      "action": "/give @p msc:pale_oak_log_gen 1",
+      "actions": [
+        "/give @p msc:pale_oak_log_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 6700,
+      "buyButtonScoreboard": "money",
+      "id": 45863834116
+    },
+    {
+      "text": "Bamboo Block Gen",
+      "subtext": "$7,000",
+      "action": "/give @p msc:bamboo_block_gen 1",
+      "actions": [
+        "/give @p msc:bamboo_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 7000,
+      "buyButtonScoreboard": "money",
+      "id": 21277125218
+    },
+    {
+      "text": "Oak Leaves Gen",
+      "subtext": "$7,300",
+      "action": "/give @p msc:oak_leaves_gen 1",
+      "actions": [
+        "/give @p msc:oak_leaves_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 7300,
+      "buyButtonScoreboard": "money",
+      "id": 41274709375
+    },
+    {
+      "text": "Stone Gen",
+      "subtext": "$7,600",
+      "action": "/give @p msc:stone_gen 1",
+      "actions": [
+        "/give @p msc:stone_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 7600,
+      "buyButtonScoreboard": "money",
+      "id": 51536142874
+    },
+    {
+      "text": "Andesite Gen",
+      "subtext": "$7,900",
+      "action": "/give @p msc:andesite_gen 1",
+      "actions": [
+        "/give @p msc:andesite_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 7900,
+      "buyButtonScoreboard": "money",
+      "id": 82860847593
+    },
+    {
+      "text": "Diorite Gen",
+      "subtext": "$8,200",
+      "action": "/give @p msc:diorite_gen 1",
+      "actions": [
+        "/give @p msc:diorite_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 8200,
+      "buyButtonScoreboard": "money",
+      "id": 53582334232
+    },
+    {
+      "text": "Granite Gen",
+      "subtext": "$8,500",
+      "action": "/give @p msc:granite_gen 1",
+      "actions": [
+        "/give @p msc:granite_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 8500,
+      "buyButtonScoreboard": "money",
+      "id": 55111620560
+    },
+    {
+      "text": "Deepslate Gen",
+      "subtext": "$8,800",
+      "action": "/give @p msc:deepslate_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 8800,
+      "buyButtonScoreboard": "money",
+      "id": 15284753861
+    },
+    {
+      "text": "Tuff Gen",
+      "subtext": "$9,100",
+      "action": "/give @p msc:tuff_gen 1",
+      "actions": [
+        "/give @p msc:tuff_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 9100,
+      "buyButtonScoreboard": "money",
+      "id": 34319666527
+    },
+    {
+      "text": "Calcite Gen",
+      "subtext": "$9,400",
+      "action": "/give @p msc:calcite_gen 1",
+      "actions": [
+        "/give @p msc:calcite_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 9400,
+      "buyButtonScoreboard": "money",
+      "id": 51791002771
+    },
+    {
+      "text": "Coal Ore Gen",
+      "subtext": "$9,700",
+      "action": "/give @p msc:coal_ore_gen 1",
+      "actions": [
+        "/give @p msc:coal_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 9700,
+      "buyButtonScoreboard": "money",
+      "id": 10039121722
+    },
+    {
+      "text": "Deepslate Coal Ore Gen",
+      "subtext": "$10,000",
+      "action": "/give @p msc:deepslate_coal_ore_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_coal_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 10000,
+      "buyButtonScoreboard": "money",
+      "id": 77424489238
+    },
+    {
+      "text": "Coal Block Gen",
+      "subtext": "$10,300",
+      "action": "/give @p msc:coal_block_gen 1",
+      "actions": [
+        "/give @p msc:coal_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 10300,
+      "buyButtonScoreboard": "money",
+      "id": 38772018677
+    },
+    {
+      "text": "Copper Ore Gen",
+      "subtext": "$10,600",
+      "action": "/give @p msc:copper_ore_gen 1",
+      "actions": [
+        "/give @p msc:copper_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 10600,
+      "buyButtonScoreboard": "money",
+      "id": 57867955669
+    },
+    {
+      "text": "Deepslate Copper Ore Gen",
+      "subtext": "$10,900",
+      "action": "/give @p msc:deepslate_copper_ore_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_copper_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 10900,
+      "buyButtonScoreboard": "money",
+      "id": 66347791263
+    },
+    {
+      "text": "Copper Block Gen",
+      "subtext": "$11,200",
+      "action": "/give @p msc:copper_block_gen 1",
+      "actions": [
+        "/give @p msc:copper_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 11200,
+      "buyButtonScoreboard": "money",
+      "id": 99728731550
+    },
+    {
+      "text": "Iron Ore Gen",
+      "subtext": "$11,500",
+      "action": "/give @p msc:iron_ore_gen 1",
+      "actions": [
+        "/give @p msc:iron_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 11500,
+      "buyButtonScoreboard": "money",
+      "id": 61978531536
+    },
+    {
+      "text": "Deepslate Iron Ore Gen",
+      "subtext": "$11,800",
+      "action": "/give @p msc:deepslate_iron_ore_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_iron_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 11800,
+      "buyButtonScoreboard": "money",
+      "id": 56683080040
+    },
+    {
+      "text": "Iron Block Gen",
+      "subtext": "$12,100",
+      "action": "/give @p msc:iron_block_gen 1",
+      "actions": [
+        "/give @p msc:iron_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 12100,
+      "buyButtonScoreboard": "money",
+      "id": 74595163489
+    },
+    {
+      "text": "Gold Ore Gen",
+      "subtext": "$12,400",
+      "action": "/give @p msc:gold_ore_gen 1",
+      "actions": [
+        "/give @p msc:gold_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 12400,
+      "buyButtonScoreboard": "money",
+      "id": 67366876525
+    },
+    {
+      "text": "Deepslate Gold Ore Gen",
+      "subtext": "$12,700",
+      "action": "/give @p msc:deepslate_gold_ore_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_gold_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 12700,
+      "buyButtonScoreboard": "money",
+      "id": 58802073061
+    },
+    {
+      "text": "Gold Block Gen",
+      "subtext": "$13,000",
+      "action": "/give @p msc:gold_block_gen 1",
+      "actions": [
+        "/give @p msc:gold_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 13000,
+      "buyButtonScoreboard": "money",
+      "id": 84748709244
+    },
+    {
+      "text": "Lapis Ore Gen",
+      "subtext": "$13,300",
+      "action": "/give @p msc:lapis_ore_gen 1",
+      "actions": [
+        "/give @p msc:lapis_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 13300,
+      "buyButtonScoreboard": "money",
+      "id": 16211866446
+    },
+    {
+      "text": "Deepslate Lapis Ore Gen",
+      "subtext": "$13,600",
+      "action": "/give @p msc:deepslate_lapis_ore_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_lapis_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 13600,
+      "buyButtonScoreboard": "money",
+      "id": 81995517341
+    },
+    {
+      "text": "Lapis Block Gen",
+      "subtext": "$13,900",
+      "action": "/give @p msc:lapis_block_gen 1",
+      "actions": [
+        "/give @p msc:lapis_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 13900,
+      "buyButtonScoreboard": "money",
+      "id": 68147568998
+    },
+    {
+      "text": "Redstone Ore Gen",
+      "subtext": "$14,200",
+      "action": "/give @p msc:redstone_ore_gen 1",
+      "actions": [
+        "/give @p msc:redstone_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 14200,
+      "buyButtonScoreboard": "money",
+      "id": 48566575971
+    },
+    {
+      "text": "Deepslate Redstone Ore Gen",
+      "subtext": "$14,500",
+      "action": "/give @p msc:deepslate_redstone_ore_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_redstone_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 14500,
+      "buyButtonScoreboard": "money",
+      "id": 14247085248
+    },
+    {
+      "text": "Redstone Block Gen",
+      "subtext": "$14,800",
+      "action": "/give @p msc:redstone_block_gen 1",
+      "actions": [
+        "/give @p msc:redstone_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 14800,
+      "buyButtonScoreboard": "money",
+      "id": 35691221374
+    },
+    {
+      "text": "Diamond Ore Gen",
+      "subtext": "$15,100",
+      "action": "/give @p msc:diamond_ore_gen 1",
+      "actions": [
+        "/give @p msc:diamond_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 15100,
+      "buyButtonScoreboard": "money",
+      "id": 37725427158
+    },
+    {
+      "text": "Deepslate Diamond Ore Gen",
+      "subtext": "$15,400",
+      "action": "/give @p msc:deepslate_diamond_ore_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_diamond_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 15400,
+      "buyButtonScoreboard": "money",
+      "id": 22986222747
+    },
+    {
+      "text": "Diamond Block Gen",
+      "subtext": "$15,700",
+      "action": "/give @p msc:diamond_block_gen 1",
+      "actions": [
+        "/give @p msc:diamond_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 15700,
+      "buyButtonScoreboard": "money",
+      "id": 94924553099
+    },
+    {
+      "text": "Emerald Ore Gen",
+      "subtext": "$16,000",
+      "action": "/give @p msc:emerald_ore_gen 1",
+      "actions": [
+        "/give @p msc:emerald_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 16000,
+      "buyButtonScoreboard": "money",
+      "id": 30778269079
+    },
+    {
+      "text": "Deepslate Emerald Ore Gen",
+      "subtext": "$16,300",
+      "action": "/give @p msc:deepslate_emerald_ore_gen 1",
+      "actions": [
+        "/give @p msc:deepslate_emerald_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 16300,
+      "buyButtonScoreboard": "money",
+      "id": 31198679225
+    },
+    {
+      "text": "Emerald Block Gen",
+      "subtext": "$16,600",
+      "action": "/give @p msc:emerald_block_gen 1",
+      "actions": [
+        "/give @p msc:emerald_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 16600,
+      "buyButtonScoreboard": "money",
+      "id": 93740806901
+    },
+    {
+      "text": "Nether Brick Gen",
+      "subtext": "$16,900",
+      "action": "/give @p msc:nether_brick_gen 1",
+      "actions": [
+        "/give @p msc:nether_brick_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 16900,
+      "buyButtonScoreboard": "money",
+      "id": 59541533330
+    },
+    {
+      "text": "Red Nether Brick Gen",
+      "subtext": "$17,200",
+      "action": "/give @p msc:red_nether_brick_gen 1",
+      "actions": [
+        "/give @p msc:red_nether_brick_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 17200,
+      "buyButtonScoreboard": "money",
+      "id": 59200563771
+    },
+    {
+      "text": "Chiseled Nether Bricks Gen",
+      "subtext": "$17,500",
+      "action": "/give @p msc:chiseled_nether_bricks_gen 1",
+      "actions": [
+        "/give @p msc:chiseled_nether_bricks_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 17500,
+      "buyButtonScoreboard": "money",
+      "id": 55833285614
+    },
+    {
+      "text": "Cracked Nether Bricks Gen",
+      "subtext": "$17,800",
+      "action": "/give @p msc:cracked_nether_bricks_gen 1",
+      "actions": [
+        "/give @p msc:cracked_nether_bricks_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 17800,
+      "buyButtonScoreboard": "money",
+      "id": 88347084377
+    }
+  ],
+  "subuis": {},
+  "scriptevent": "Gens1",
+  "cancel": "",
+  "folder": null,
+  "theme": 68,
+  "paperdoll": true
+}</code></pre>
+        </div>
+
+        <div id="page2" class="page">
+<pre><code>{
+  "name": "Gens 2",
+  "body": "Select a generator to purchase",
+  "layout": 4,
+  "type": 0,
+  "buttons": [
+    {
+      "text": "Blackstone Gen",
+      "subtext": "$18,100",
+      "action": "/give @p msc:blackstone_gen 1",
+      "actions": [
+        "/give @p msc:blackstone_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 18100,
+      "buyButtonScoreboard": "money",
+      "id": 56461623235
+    },
+    {
+      "text": "Basalt Gen",
+      "subtext": "$18,400",
+      "action": "/give @p msc:basalt_gen 1",
+      "actions": [
+        "/give @p msc:basalt_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 18400,
+      "buyButtonScoreboard": "money",
+      "id": 15373833928
+    },
+    {
+      "text": "Magma Gen",
+      "subtext": "$18,700",
+      "action": "/give @p msc:magma_gen 1",
+      "actions": [
+        "/give @p msc:magma_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 18700,
+      "buyButtonScoreboard": "money",
+      "id": 34110366476
+    },
+    {
+      "text": "Soul Sand Gen",
+      "subtext": "$19,000",
+      "action": "/give @p msc:soul_sand_gen 1",
+      "actions": [
+        "/give @p msc:soul_sand_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 19000,
+      "buyButtonScoreboard": "money",
+      "id": 17835467217
+    },
+    {
+      "text": "Nether Gold Ore Gen",
+      "subtext": "$19,300",
+      "action": "/give @p msc:nether_gold_ore_gen 1",
+      "actions": [
+        "/give @p msc:nether_gold_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 19300,
+      "buyButtonScoreboard": "money",
+      "id": 64708199057
+    },
+    {
+      "text": "Quartz Ore Gen",
+      "subtext": "$19,600",
+      "action": "/give @p msc:quartz_ore_gen 1",
+      "actions": [
+        "/give @p msc:quartz_ore_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 19600,
+      "buyButtonScoreboard": "money",
+      "id": 11319169763
+    },
+    {
+      "text": "Quartz Block Gen",
+      "subtext": "$19,900",
+      "action": "/give @p msc:quartz_block_gen 1",
+      "actions": [
+        "/give @p msc:quartz_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 19900,
+      "buyButtonScoreboard": "money",
+      "id": 67452793603
+    },
+    {
+      "text": "Crimson Stem Gen",
+      "subtext": "$20,200",
+      "action": "/give @p msc:crimson_stem_gen 1",
+      "actions": [
+        "/give @p msc:crimson_stem_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 20200,
+      "buyButtonScoreboard": "money",
+      "id": 46128002741
+    },
+    {
+      "text": "Warped Stem Gen",
+      "subtext": "$20,500",
+      "action": "/give @p msc:warped_stem_gen 1",
+      "actions": [
+        "/give @p msc:warped_stem_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 20500,
+      "buyButtonScoreboard": "money",
+      "id": 29855943320
+    },
+    {
+      "text": "Ancient Debris Gen",
+      "subtext": "$20,800",
+      "action": "/give @p msc:ancient_debris_gen 1",
+      "actions": [
+        "/give @p msc:ancient_debris_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 20800,
+      "buyButtonScoreboard": "money",
+      "id": 38815332407
+    },
+    {
+      "text": "Netherite Block Gen",
+      "subtext": "$21,100",
+      "action": "/give @p msc:netherite_block_gen 1",
+      "actions": [
+        "/give @p msc:netherite_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 21100,
+      "buyButtonScoreboard": "money",
+      "id": 13488879693
+    },
+    {
+      "text": "End Stone Gen",
+      "subtext": "$21,400",
+      "action": "/give @p msc:end_stone_gen 1",
+      "actions": [
+        "/give @p msc:end_stone_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 21400,
+      "buyButtonScoreboard": "money",
+      "id": 36533161990
+    },
+    {
+      "text": "Purpur Block Gen",
+      "subtext": "$21,700",
+      "action": "/give @p msc:purpur_block_gen 1",
+      "actions": [
+        "/give @p msc:purpur_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 21700,
+      "buyButtonScoreboard": "money",
+      "id": 85421047342
+    },
+    {
+      "text": "Obsidian Gen",
+      "subtext": "$22,000",
+      "action": "/give @p msc:obsidian_gen 1",
+      "actions": [
+        "/give @p msc:obsidian_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 22000,
+      "buyButtonScoreboard": "money",
+      "id": 40558000924
+    },
+    {
+      "text": "Crying Obsidian Gen",
+      "subtext": "$22,300",
+      "action": "/give @p msc:crying_obsidian_gen 1",
+      "actions": [
+        "/give @p msc:crying_obsidian_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 22300,
+      "buyButtonScoreboard": "money",
+      "id": 21472331123
+    },
+    {
+      "text": "Amethyst Block Gen",
+      "subtext": "$22,600",
+      "action": "/give @p msc:amethyst_block_gen 1",
+      "actions": [
+        "/give @p msc:amethyst_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 22600,
+      "buyButtonScoreboard": "money",
+      "id": 92459743018
+    },
+    {
+      "text": "Prismarine Gen",
+      "subtext": "$22,900",
+      "action": "/give @p msc:prismarine_gen 1",
+      "actions": [
+        "/give @p msc:prismarine_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 22900,
+      "buyButtonScoreboard": "money",
+      "id": 11368086771
+    },
+    {
+      "text": "Prismarine Bricks Gen",
+      "subtext": "$23,200",
+      "action": "/give @p msc:prismarine_bricks_gen 1",
+      "actions": [
+        "/give @p msc:prismarine_bricks_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 23200,
+      "buyButtonScoreboard": "money",
+      "id": 17345211167
+    },
+    {
+      "text": "Dark Prismarine Gen",
+      "subtext": "$23,500",
+      "action": "/give @p msc:dark_prismarine_gen 1",
+      "actions": [
+        "/give @p msc:dark_prismarine_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 23500,
+      "buyButtonScoreboard": "money",
+      "id": 11230085840
+    },
+    {
+      "text": "Sea Lantern Gen",
+      "subtext": "$23,800",
+      "action": "/give @p msc:sea_lantern_gen 1",
+      "actions": [
+        "/give @p msc:sea_lantern_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 23800,
+      "buyButtonScoreboard": "money",
+      "id": 65545677785
+    },
+    {
+      "text": "Sponge Gen",
+      "subtext": "$24,100",
+      "action": "/give @p msc:sponge_gen 1",
+      "actions": [
+        "/give @p msc:sponge_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 24100,
+      "buyButtonScoreboard": "money",
+      "id": 13923819866
+    },
+    {
+      "text": "Slime Gen",
+      "subtext": "$24,400",
+      "action": "/give @p msc:slime_gen 1",
+      "actions": [
+        "/give @p msc:slime_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 24400,
+      "buyButtonScoreboard": "money",
+      "id": 85527320860
+    },
+    {
+      "text": "Honey Block Gen",
+      "subtext": "$24,700",
+      "action": "/give @p msc:honey_block_gen 1",
+      "actions": [
+        "/give @p msc:honey_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 24700,
+      "buyButtonScoreboard": "money",
+      "id": 38710966957
+    },
+    {
+      "text": "Honeycomb Block Gen",
+      "subtext": "$25,000",
+      "action": "/give @p msc:honeycomb_block_gen 1",
+      "actions": [
+        "/give @p msc:honeycomb_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 25000,
+      "buyButtonScoreboard": "money",
+      "id": 96041817147
+    },
+    {
+      "text": "Bone Block Gen",
+      "subtext": "$25,300",
+      "action": "/give @p msc:bone_block_gen 1",
+      "actions": [
+        "/give @p msc:bone_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 25300,
+      "buyButtonScoreboard": "money",
+      "id": 46460664798
+    },
+    {
+      "text": "Sculk Gen",
+      "subtext": "$25,600",
+      "action": "/give @p msc:sculk_gen 1",
+      "actions": [
+        "/give @p msc:sculk_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 25600,
+      "buyButtonScoreboard": "money",
+      "id": 84586856320
+    },
+    {
+      "text": "Web Gen",
+      "subtext": "$25,900",
+      "action": "/give @p msc:web_gen 1",
+      "actions": [
+        "/give @p msc:web_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 25900,
+      "buyButtonScoreboard": "money",
+      "id": 17092892210
+    },
+    {
+      "text": "Packed Ice Gen",
+      "subtext": "$26,200",
+      "action": "/give @p msc:packed_ice_gen 1",
+      "actions": [
+        "/give @p msc:packed_ice_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 26200,
+      "buyButtonScoreboard": "money",
+      "id": 11058787437
+    },
+    {
+      "text": "Resin Block Gen",
+      "subtext": "$26,500",
+      "action": "/give @p msc:resin_block_gen 1",
+      "actions": [
+        "/give @p msc:resin_block_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 26500,
+      "buyButtonScoreboard": "money",
+      "id": 46298203144
+    },
+    {
+      "text": "Resin Bricks Gen",
+      "subtext": "$26,800",
+      "action": "/give @p msc:resin_bricks_gen 1",
+      "actions": [
+        "/give @p msc:resin_bricks_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 26800,
+      "buyButtonScoreboard": "money",
+      "id": 33051775978
+    },
+    {
+      "text": "Chiseled Resin Bricks Gen",
+      "subtext": "$27,100",
+      "action": "/give @p msc:chiseled_resin_bricks_gen 1",
+      "actions": [
+        "/give @p msc:chiseled_resin_bricks_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 27100,
+      "buyButtonScoreboard": "money",
+      "id": 63461963332
+    },
+    {
+      "text": "Mob Spawner Gen",
+      "subtext": "$27,400",
+      "action": "/give @p msc:mob_spawner_gen 1",
+      "actions": [
+        "/give @p msc:mob_spawner_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 27400,
+      "buyButtonScoreboard": "money",
+      "id": 18491509671
+    },
+    {
+      "text": "Beacon Gen",
+      "subtext": "$27,700",
+      "action": "/give @p msc:beacon_gen 1",
+      "actions": [
+        "/give @p msc:beacon_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 27700,
+      "buyButtonScoreboard": "money",
+      "id": 47155737481
+    },
+    {
+      "text": "Lodestone Gen",
+      "subtext": "$28,000",
+      "action": "/give @p msc:lodestone_gen 1",
+      "actions": [
+        "/give @p msc:lodestone_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 28000,
+      "buyButtonScoreboard": "money",
+      "id": 59606240479
+    },
+    {
+      "text": "Hardened Clay Gen",
+      "subtext": "$28,300",
+      "action": "/give @p msc:hardened_clay_gen 1",
+      "actions": [
+        "/give @p msc:hardened_clay_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 28300,
+      "buyButtonScoreboard": "money",
+      "id": 46171199822
+    },
+    {
+      "text": "White Terracotta Gen",
+      "subtext": "$28,600",
+      "action": "/give @p msc:white_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:white_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 28600,
+      "buyButtonScoreboard": "money",
+      "id": 68568104381
+    },
+    {
+      "text": "Orange Terracotta Gen",
+      "subtext": "$28,900",
+      "action": "/give @p msc:orange_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:orange_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 28900,
+      "buyButtonScoreboard": "money",
+      "id": 16173948034
+    },
+    {
+      "text": "Magenta Terracotta Gen",
+      "subtext": "$29,200",
+      "action": "/give @p msc:magenta_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:magenta_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 29200,
+      "buyButtonScoreboard": "money",
+      "id": 47875743943
+    },
+    {
+      "text": "Light Blue Terracotta Gen",
+      "subtext": "$29,500",
+      "action": "/give @p msc:light_blue_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:light_blue_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 29500,
+      "buyButtonScoreboard": "money",
+      "id": 18578875529
+    },
+    {
+      "text": "Yellow Terracotta Gen",
+      "subtext": "$29,800",
+      "action": "/give @p msc:yellow_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:yellow_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 29800,
+      "buyButtonScoreboard": "money",
+      "id": 64358013567
+    },
+    {
+      "text": "Lime Terracotta Gen",
+      "subtext": "$30,100",
+      "action": "/give @p msc:lime_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:lime_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 30100,
+      "buyButtonScoreboard": "money",
+      "id": 42447263652
+    },
+    {
+      "text": "Pink Terracotta Gen",
+      "subtext": "$30,400",
+      "action": "/give @p msc:pink_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:pink_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 30400,
+      "buyButtonScoreboard": "money",
+      "id": 96543943990
+    },
+    {
+      "text": "Gray Terracotta Gen",
+      "subtext": "$30,700",
+      "action": "/give @p msc:gray_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:gray_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 30700,
+      "buyButtonScoreboard": "money",
+      "id": 54445177715
+    },
+    {
+      "text": "Light Gray Terracotta Gen",
+      "subtext": "$31,000",
+      "action": "/give @p msc:light_gray_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:light_gray_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 31000,
+      "buyButtonScoreboard": "money",
+      "id": 37121328072
+    },
+    {
+      "text": "Cyan Terracotta Gen",
+      "subtext": "$31,300",
+      "action": "/give @p msc:cyan_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:cyan_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 31300,
+      "buyButtonScoreboard": "money",
+      "id": 20863796121
+    },
+    {
+      "text": "Purple Terracotta Gen",
+      "subtext": "$31,600",
+      "action": "/give @p msc:purple_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:purple_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 31600,
+      "buyButtonScoreboard": "money",
+      "id": 82164866779
+    },
+    {
+      "text": "Blue Terracotta Gen",
+      "subtext": "$31,900",
+      "action": "/give @p msc:blue_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:blue_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 31900,
+      "buyButtonScoreboard": "money",
+      "id": 88898335186
+    },
+    {
+      "text": "Brown Terracotta Gen",
+      "subtext": "$32,200",
+      "action": "/give @p msc:brown_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:brown_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 32200,
+      "buyButtonScoreboard": "money",
+      "id": 30708864486
+    },
+    {
+      "text": "Green Terracotta Gen",
+      "subtext": "$32,500",
+      "action": "/give @p msc:green_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:green_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 32500,
+      "buyButtonScoreboard": "money",
+      "id": 49313483082
+    },
+    {
+      "text": "Red Terracotta Gen",
+      "subtext": "$32,800",
+      "action": "/give @p msc:red_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:red_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 32800,
+      "buyButtonScoreboard": "money",
+      "id": 11456036675
+    },
+    {
+      "text": "Black Terracotta Gen",
+      "subtext": "$33,100",
+      "action": "/give @p msc:black_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:black_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 33100,
+      "buyButtonScoreboard": "money",
+      "id": 34292219956
+    },
+    {
+      "text": "White Glazed Terracotta Gen",
+      "subtext": "$33,400",
+      "action": "/give @p msc:white_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:white_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 33400,
+      "buyButtonScoreboard": "money",
+      "id": 71520884474
+    },
+    {
+      "text": "Orange Glazed Terracotta Gen",
+      "subtext": "$33,700",
+      "action": "/give @p msc:orange_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:orange_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 33700,
+      "buyButtonScoreboard": "money",
+      "id": 45433745044
+    },
+    {
+      "text": "Magenta Glazed Terracotta Gen",
+      "subtext": "$34,000",
+      "action": "/give @p msc:magenta_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:magenta_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 34000,
+      "buyButtonScoreboard": "money",
+      "id": 65925815702
+    },
+    {
+      "text": "Light Blue Glazed Terracotta Gen",
+      "subtext": "$34,300",
+      "action": "/give @p msc:light_blue_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:light_blue_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 34300,
+      "buyButtonScoreboard": "money",
+      "id": 62023594714
+    },
+    {
+      "text": "Yellow Glazed Terracotta Gen",
+      "subtext": "$34,600",
+      "action": "/give @p msc:yellow_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:yellow_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 34600,
+      "buyButtonScoreboard": "money",
+      "id": 86406092949
+    },
+    {
+      "text": "Lime Glazed Terracotta Gen",
+      "subtext": "$34,900",
+      "action": "/give @p msc:lime_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:lime_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 34900,
+      "buyButtonScoreboard": "money",
+      "id": 80322122131
+    },
+    {
+      "text": "Pink Glazed Terracotta Gen",
+      "subtext": "$35,200",
+      "action": "/give @p msc:pink_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:pink_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 35200,
+      "buyButtonScoreboard": "money",
+      "id": 96337962379
+    },
+    {
+      "text": "Gray Glazed Terracotta Gen",
+      "subtext": "$35,500",
+      "action": "/give @p msc:gray_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:gray_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 35500,
+      "buyButtonScoreboard": "money",
+      "id": 11661562956
+    },
+    {
+      "text": "Silver Glazed Terracotta Gen",
+      "subtext": "$35,800",
+      "action": "/give @p msc:silver_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:silver_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 35800,
+      "buyButtonScoreboard": "money",
+      "id": 73260169592
+    }
+  ],
+  "subuis": {},
+  "scriptevent": "Gens2",
+  "cancel": "",
+  "folder": null,
+  "theme": 68,
+  "paperdoll": true
+}</code></pre>
+        </div>
+
+        <div id="page3" class="page">
+<pre><code>{
+  "name": "Gens 3",
+  "body": "Select a generator to purchase",
+  "layout": 4,
+  "type": 0,
+  "buttons": [
+    {
+      "text": "Cyan Glazed Terracotta Gen",
+      "subtext": "$36,100",
+      "action": "/give @p msc:cyan_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:cyan_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 36100,
+      "buyButtonScoreboard": "money",
+      "id": 89673905963
+    },
+    {
+      "text": "Purple Glazed Terracotta Gen",
+      "subtext": "$36,400",
+      "action": "/give @p msc:purple_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:purple_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 36400,
+      "buyButtonScoreboard": "money",
+      "id": 33926799774
+    },
+    {
+      "text": "Blue Glazed Terracotta Gen",
+      "subtext": "$36,700",
+      "action": "/give @p msc:blue_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:blue_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 36700,
+      "buyButtonScoreboard": "money",
+      "id": 58688392529
+    },
+    {
+      "text": "Brown Glazed Terracotta Gen",
+      "subtext": "$37,000",
+      "action": "/give @p msc:brown_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:brown_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 37000,
+      "buyButtonScoreboard": "money",
+      "id": 76466146207
+    },
+    {
+      "text": "Green Glazed Terracotta Gen",
+      "subtext": "$37,300",
+      "action": "/give @p msc:green_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:green_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 37300,
+      "buyButtonScoreboard": "money",
+      "id": 14652912074
+    },
+    {
+      "text": "Red Glazed Terracotta Gen",
+      "subtext": "$37,600",
+      "action": "/give @p msc:red_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:red_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 37600,
+      "buyButtonScoreboard": "money",
+      "id": 40311235944
+    },
+    {
+      "text": "Black Glazed Terracotta Gen",
+      "subtext": "$37,900",
+      "action": "/give @p msc:black_glazed_terracotta_gen 1",
+      "actions": [
+        "/give @p msc:black_glazed_terracotta_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 37900,
+      "buyButtonScoreboard": "money",
+      "id": 77785176413
+    },
+    {
+      "text": "White Concrete Powder Gen",
+      "subtext": "$38,200",
+      "action": "/give @p msc:white_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:white_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 38200,
+      "buyButtonScoreboard": "money",
+      "id": 50671175868
+    },
+    {
+      "text": "Orange Concrete Powder Gen",
+      "subtext": "$38,500",
+      "action": "/give @p msc:orange_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:orange_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 38500,
+      "buyButtonScoreboard": "money",
+      "id": 16421084632
+    },
+    {
+      "text": "Magenta Concrete Powder Gen",
+      "subtext": "$38,800",
+      "action": "/give @p msc:magenta_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:magenta_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 38800,
+      "buyButtonScoreboard": "money",
+      "id": 34485624000
+    },
+    {
+      "text": "Light Blue Concrete Powder Gen",
+      "subtext": "$39,100",
+      "action": "/give @p msc:light_blue_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:light_blue_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 39100,
+      "buyButtonScoreboard": "money",
+      "id": 80781978964
+    },
+    {
+      "text": "Yellow Concrete Powder Gen",
+      "subtext": "$39,400",
+      "action": "/give @p msc:yellow_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:yellow_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 39400,
+      "buyButtonScoreboard": "money",
+      "id": 96651665918
+    },
+    {
+      "text": "Lime Concrete Powder Gen",
+      "subtext": "$39,700",
+      "action": "/give @p msc:lime_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:lime_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 39700,
+      "buyButtonScoreboard": "money",
+      "id": 80978424989
+    },
+    {
+      "text": "Pink Concrete Powder Gen",
+      "subtext": "$40,000",
+      "action": "/give @p msc:pink_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:pink_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 40000,
+      "buyButtonScoreboard": "money",
+      "id": 32782872217
+    },
+    {
+      "text": "Gray Concrete Powder Gen",
+      "subtext": "$40,300",
+      "action": "/give @p msc:gray_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:gray_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 40300,
+      "buyButtonScoreboard": "money",
+      "id": 33708107885
+    },
+    {
+      "text": "Light Gray Concrete Powder Gen",
+      "subtext": "$40,600",
+      "action": "/give @p msc:light_gray_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:light_gray_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 40600,
+      "buyButtonScoreboard": "money",
+      "id": 92182514742
+    },
+    {
+      "text": "Cyan Concrete Powder Gen",
+      "subtext": "$40,900",
+      "action": "/give @p msc:cyan_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:cyan_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 40900,
+      "buyButtonScoreboard": "money",
+      "id": 51783795308
+    },
+    {
+      "text": "Purple Concrete Powder Gen",
+      "subtext": "$41,200",
+      "action": "/give @p msc:purple_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:purple_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 41200,
+      "buyButtonScoreboard": "money",
+      "id": 98183145992
+    },
+    {
+      "text": "Blue Concrete Powder Gen",
+      "subtext": "$41,500",
+      "action": "/give @p msc:blue_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:blue_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 41500,
+      "buyButtonScoreboard": "money",
+      "id": 56681774962
+    },
+    {
+      "text": "Brown Concrete Powder Gen",
+      "subtext": "$41,800",
+      "action": "/give @p msc:brown_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:brown_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 41800,
+      "buyButtonScoreboard": "money",
+      "id": 64704303258
+    },
+    {
+      "text": "Green Concrete Powder Gen",
+      "subtext": "$42,100",
+      "action": "/give @p msc:green_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:green_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 42100,
+      "buyButtonScoreboard": "money",
+      "id": 88145577247
+    },
+    {
+      "text": "Red Concrete Powder Gen",
+      "subtext": "$42,400",
+      "action": "/give @p msc:red_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:red_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 42400,
+      "buyButtonScoreboard": "money",
+      "id": 44935420628
+    },
+    {
+      "text": "Black Concrete Powder Gen",
+      "subtext": "$42,700",
+      "action": "/give @p msc:black_concrete_powder_gen 1",
+      "actions": [
+        "/give @p msc:black_concrete_powder_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 42700,
+      "buyButtonScoreboard": "money",
+      "id": 82064467655
+    },
+    {
+      "text": "White Concrete Gen",
+      "subtext": "$43,000",
+      "action": "/give @p msc:white_concrete_gen 1",
+      "actions": [
+        "/give @p msc:white_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 43000,
+      "buyButtonScoreboard": "money",
+      "id": 74344129864
+    },
+    {
+      "text": "Orange Concrete Gen",
+      "subtext": "$43,300",
+      "action": "/give @p msc:orange_concrete_gen 1",
+      "actions": [
+        "/give @p msc:orange_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 43300,
+      "buyButtonScoreboard": "money",
+      "id": 67076014708
+    },
+    {
+      "text": "Magenta Concrete Gen",
+      "subtext": "$43,600",
+      "action": "/give @p msc:magenta_concrete_gen 1",
+      "actions": [
+        "/give @p msc:magenta_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 43600,
+      "buyButtonScoreboard": "money",
+      "id": 62761962784
+    },
+    {
+      "text": "Light Blue Concrete Gen",
+      "subtext": "$43,900",
+      "action": "/give @p msc:light_blue_concrete_gen 1",
+      "actions": [
+        "/give @p msc:light_blue_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 43900,
+      "buyButtonScoreboard": "money",
+      "id": 19168066797
+    },
+    {
+      "text": "Yellow Concrete Gen",
+      "subtext": "$44,200",
+      "action": "/give @p msc:yellow_concrete_gen 1",
+      "actions": [
+        "/give @p msc:yellow_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 44200,
+      "buyButtonScoreboard": "money",
+      "id": 41105544802
+    },
+    {
+      "text": "Lime Concrete Gen",
+      "subtext": "$44,500",
+      "action": "/give @p msc:lime_concrete_gen 1",
+      "actions": [
+        "/give @p msc:lime_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 44500,
+      "buyButtonScoreboard": "money",
+      "id": 99348633721
+    },
+    {
+      "text": "Pink Concrete Gen",
+      "subtext": "$44,800",
+      "action": "/give @p msc:pink_concrete_gen 1",
+      "actions": [
+        "/give @p msc:pink_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 44800,
+      "buyButtonScoreboard": "money",
+      "id": 77564659239
+    },
+    {
+      "text": "Gray Concrete Gen",
+      "subtext": "$45,100",
+      "action": "/give @p msc:gray_concrete_gen 1",
+      "actions": [
+        "/give @p msc:gray_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 45100,
+      "buyButtonScoreboard": "money",
+      "id": 98808483203
+    },
+    {
+      "text": "Light Gray Concrete Gen",
+      "subtext": "$45,400",
+      "action": "/give @p msc:light_gray_concrete_gen 1",
+      "actions": [
+        "/give @p msc:light_gray_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 45400,
+      "buyButtonScoreboard": "money",
+      "id": 63582085721
+    },
+    {
+      "text": "Cyan Concrete Gen",
+      "subtext": "$45,700",
+      "action": "/give @p msc:cyan_concrete_gen 1",
+      "actions": [
+        "/give @p msc:cyan_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 45700,
+      "buyButtonScoreboard": "money",
+      "id": 23940424815
+    },
+    {
+      "text": "Purple Concrete Gen",
+      "subtext": "$46,000",
+      "action": "/give @p msc:purple_concrete_gen 1",
+      "actions": [
+        "/give @p msc:purple_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 46000,
+      "buyButtonScoreboard": "money",
+      "id": 78532044550
+    },
+    {
+      "text": "Blue Concrete Gen",
+      "subtext": "$46,300",
+      "action": "/give @p msc:blue_concrete_gen 1",
+      "actions": [
+        "/give @p msc:blue_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 46300,
+      "buyButtonScoreboard": "money",
+      "id": 43707895005
+    },
+    {
+      "text": "Brown Concrete Gen",
+      "subtext": "$46,600",
+      "action": "/give @p msc:brown_concrete_gen 1",
+      "actions": [
+        "/give @p msc:brown_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 46600,
+      "buyButtonScoreboard": "money",
+      "id": 39310379293
+    },
+    {
+      "text": "Green Concrete Gen",
+      "subtext": "$46,900",
+      "action": "/give @p msc:green_concrete_gen 1",
+      "actions": [
+        "/give @p msc:green_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 46900,
+      "buyButtonScoreboard": "money",
+      "id": 81597991431
+    },
+    {
+      "text": "Red Concrete Gen",
+      "subtext": "$47,200",
+      "action": "/give @p msc:red_concrete_gen 1",
+      "actions": [
+        "/give @p msc:red_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 47200,
+      "buyButtonScoreboard": "money",
+      "id": 16751467128
+    },
+    {
+      "text": "Black Concrete Gen",
+      "subtext": "$47,500",
+      "action": "/give @p msc:black_concrete_gen 1",
+      "actions": [
+        "/give @p msc:black_concrete_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 47500,
+      "buyButtonScoreboard": "money",
+      "id": 83956533644
+    },
+    {
+      "text": "White Wool Gen",
+      "subtext": "$47,800",
+      "action": "/give @p msc:white_wool_gen 1",
+      "actions": [
+        "/give @p msc:white_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 47800,
+      "buyButtonScoreboard": "money",
+      "id": 24120709603
+    },
+    {
+      "text": "Orange Wool Gen",
+      "subtext": "$48,100",
+      "action": "/give @p msc:orange_wool_gen 1",
+      "actions": [
+        "/give @p msc:orange_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 48100,
+      "buyButtonScoreboard": "money",
+      "id": 78583317661
+    },
+    {
+      "text": "Magenta Wool Gen",
+      "subtext": "$48,400",
+      "action": "/give @p msc:magenta_wool_gen 1",
+      "actions": [
+        "/give @p msc:magenta_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 48400,
+      "buyButtonScoreboard": "money",
+      "id": 22021912130
+    },
+    {
+      "text": "Light Blue Wool Gen",
+      "subtext": "$48,700",
+      "action": "/give @p msc:light_blue_wool_gen 1",
+      "actions": [
+        "/give @p msc:light_blue_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 48700,
+      "buyButtonScoreboard": "money",
+      "id": 89590390525
+    },
+    {
+      "text": "Yellow Wool Gen",
+      "subtext": "$49,000",
+      "action": "/give @p msc:yellow_wool_gen 1",
+      "actions": [
+        "/give @p msc:yellow_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 49000,
+      "buyButtonScoreboard": "money",
+      "id": 13663327414
+    },
+    {
+      "text": "Lime Wool Gen",
+      "subtext": "$49,300",
+      "action": "/give @p msc:lime_wool_gen 1",
+      "actions": [
+        "/give @p msc:lime_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 49300,
+      "buyButtonScoreboard": "money",
+      "id": 36494155085
+    },
+    {
+      "text": "Pink Wool Gen",
+      "subtext": "$49,600",
+      "action": "/give @p msc:pink_wool_gen 1",
+      "actions": [
+        "/give @p msc:pink_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 49600,
+      "buyButtonScoreboard": "money",
+      "id": 20079283549
+    },
+    {
+      "text": "Gray Wool Gen",
+      "subtext": "$49,900",
+      "action": "/give @p msc:gray_wool_gen 1",
+      "actions": [
+        "/give @p msc:gray_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 49900,
+      "buyButtonScoreboard": "money",
+      "id": 15421698247
+    },
+    {
+      "text": "Light Gray Wool Gen",
+      "subtext": "$50,200",
+      "action": "/give @p msc:light_gray_wool_gen 1",
+      "actions": [
+        "/give @p msc:light_gray_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 50200,
+      "buyButtonScoreboard": "money",
+      "id": 62986320693
+    },
+    {
+      "text": "Cyan Wool Gen",
+      "subtext": "$50,500",
+      "action": "/give @p msc:cyan_wool_gen 1",
+      "actions": [
+        "/give @p msc:cyan_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 50500,
+      "buyButtonScoreboard": "money",
+      "id": 71601778453
+    },
+    {
+      "text": "Purple Wool Gen",
+      "subtext": "$50,800",
+      "action": "/give @p msc:purple_wool_gen 1",
+      "actions": [
+        "/give @p msc:purple_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 50800,
+      "buyButtonScoreboard": "money",
+      "id": 27489992659
+    },
+    {
+      "text": "Blue Wool Gen",
+      "subtext": "$51,100",
+      "action": "/give @p msc:blue_wool_gen 1",
+      "actions": [
+        "/give @p msc:blue_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 51100,
+      "buyButtonScoreboard": "money",
+      "id": 52905588061
+    },
+    {
+      "text": "Brown Wool Gen",
+      "subtext": "$51,400",
+      "action": "/give @p msc:brown_wool_gen 1",
+      "actions": [
+        "/give @p msc:brown_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 51400,
+      "buyButtonScoreboard": "money",
+      "id": 79104072181
+    },
+    {
+      "text": "Green Wool Gen",
+      "subtext": "$51,700",
+      "action": "/give @p msc:green_wool_gen 1",
+      "actions": [
+        "/give @p msc:green_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 51700,
+      "buyButtonScoreboard": "money",
+      "id": 23203758744
+    },
+    {
+      "text": "Red Wool Gen",
+      "subtext": "$52,000",
+      "action": "/give @p msc:red_wool_gen 1",
+      "actions": [
+        "/give @p msc:red_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 52000,
+      "buyButtonScoreboard": "money",
+      "id": 77274414697
+    },
+    {
+      "text": "Black Wool Gen",
+      "subtext": "$52,300",
+      "action": "/give @p msc:black_wool_gen 1",
+      "actions": [
+        "/give @p msc:black_wool_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 52300,
+      "buyButtonScoreboard": "money",
+      "id": 17841650260
+    },
+    {
+      "text": "Undyed Shulker Box Gen",
+      "subtext": "$52,600",
+      "action": "/give @p msc:undyed_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:undyed_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 52600,
+      "buyButtonScoreboard": "money",
+      "id": 47082745071
+    },
+    {
+      "text": "White Shulker Box Gen",
+      "subtext": "$52,900",
+      "action": "/give @p msc:white_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:white_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 52900,
+      "buyButtonScoreboard": "money",
+      "id": 20066241204
+    },
+    {
+      "text": "Orange Shulker Box Gen",
+      "subtext": "$53,200",
+      "action": "/give @p msc:orange_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:orange_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 53200,
+      "buyButtonScoreboard": "money",
+      "id": 15533774974
+    },
+    {
+      "text": "Magenta Shulker Box Gen",
+      "subtext": "$53,500",
+      "action": "/give @p msc:magenta_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:magenta_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 53500,
+      "buyButtonScoreboard": "money",
+      "id": 66513016852
+    },
+    {
+      "text": "Light Blue Shulker Box Gen",
+      "subtext": "$53,800",
+      "action": "/give @p msc:light_blue_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:light_blue_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 53800,
+      "buyButtonScoreboard": "money",
+      "id": 63803915332
+    }
+  ],
+  "subuis": {},
+  "scriptevent": "Gens3",
+  "cancel": "",
+  "folder": null,
+  "theme": 68,
+  "paperdoll": true
+}</code></pre>
+        </div>
+
+        <div id="page4" class="page">
+<pre><code><h1>{
+  "name": "Gens 4",
+  "body": "Select a generator to purchase",
+  "layout": 4,
+  "type": 0,
+  "buttons": [
+    {
+      "text": "Yellow Shulker Box Gen",
+      "subtext": "$54,100",
+      "action": "/give @p msc:yellow_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:yellow_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 54100,
+      "buyButtonScoreboard": "money",
+      "id": 81983875407
+    },
+    {
+      "text": "Lime Shulker Box Gen",
+      "subtext": "$54,400",
+      "action": "/give @p msc:lime_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:lime_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 54400,
+      "buyButtonScoreboard": "money",
+      "id": 60356191792
+    },
+    {
+      "text": "Pink Shulker Box Gen",
+      "subtext": "$54,700",
+      "action": "/give @p msc:pink_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:pink_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 54700,
+      "buyButtonScoreboard": "money",
+      "id": 23102484158
+    },
+    {
+      "text": "Gray Shulker Box Gen",
+      "subtext": "$55,000",
+      "action": "/give @p msc:gray_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:gray_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 55000,
+      "buyButtonScoreboard": "money",
+      "id": 86648743252
+    },
+    {
+      "text": "Light Gray Shulker Box Gen",
+      "subtext": "$55,300",
+      "action": "/give @p msc:light_gray_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:light_gray_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 55300,
+      "buyButtonScoreboard": "money",
+      "id": 63270939602
+    },
+    {
+      "text": "Cyan Shulker Box Gen",
+      "subtext": "$55,600",
+      "action": "/give @p msc:cyan_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:cyan_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 55600,
+      "buyButtonScoreboard": "money",
+      "id": 33335642142
+    },
+    {
+      "text": "Purple Shulker Box Gen",
+      "subtext": "$55,900",
+      "action": "/give @p msc:purple_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:purple_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 55900,
+      "buyButtonScoreboard": "money",
+      "id": 20454854158
+    },
+    {
+      "text": "Blue Shulker Box Gen",
+      "subtext": "$56,200",
+      "action": "/give @p msc:blue_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:blue_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 56200,
+      "buyButtonScoreboard": "money",
+      "id": 39530843155
+    },
+    {
+      "text": "Brown Shulker Box Gen",
+      "subtext": "$56,500",
+      "action": "/give @p msc:brown_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:brown_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 56500,
+      "buyButtonScoreboard": "money",
+      "id": 54448627237
+    },
+    {
+      "text": "Green Shulker Box Gen",
+      "subtext": "$56,800",
+      "action": "/give @p msc:green_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:green_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 56800,
+      "buyButtonScoreboard": "money",
+      "id": 18070075664
+    },
+    {
+      "text": "Red Shulker Box Gen",
+      "subtext": "$57,100",
+      "action": "/give @p msc:red_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:red_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 57100,
+      "buyButtonScoreboard": "money",
+      "id": 10623011420
+    },
+    {
+      "text": "Black Shulker Box Gen",
+      "subtext": "$57,400",
+      "action": "/give @p msc:black_shulker_box_gen 1",
+      "actions": [
+        "/give @p msc:black_shulker_box_gen 1"
+      ],
+      "iconOverrides": [],
+      "requiredTag": "",
+      "buyButtonEnabled": true,
+      "disabled": false,
+      "buyButtonPrice": 57400,
+      "buyButtonScoreboard": "money",
+      "id": 30650102050
+    }
+  ],
+  "subuis": {},
+  "scriptevent": "Gens4",
+  "cancel": "",
+  "folder": null,
+  "theme": 68,
+  "paperdoll": true
+}</h1></code></pre>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId, btn) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+            // Deactivate all navigation buttons
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active-btn'));
+            
+            // Show the selected page and highlight button
+            document.getElementById(pageId).classList.add('active-page');
+            btn.classList.add('active-btn');
+        }
+
+        function copyCode() {
+            // Select code within the currently visible page
+            const activeCode = document.querySelector('.active-page code').innerText;
+            
+            navigator.clipboard.writeText(activeCode).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.innerText;
+                btn.innerText = "Copied!";
+                btn.style.background = "#007ACC";
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = "#2ea44f";
+                }, 1500);
+            });
+        }
+    </script>
+
+</body>
+</html>
