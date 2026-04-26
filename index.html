@@ -3,37 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Two-Page Site</title>
+    <title>Code Repository</title>
     <style>
-        /* General Styling */
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        nav { margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1e1e1e; color: #d4d4d4; padding: 40px; }
+        nav { margin-bottom: 20px; display: flex; gap: 10px; align-items: center; }
         
-        /* Button Styling */
+        /* Buttons */
         button { 
-            padding: 10px 20px; font-size: 16px; cursor: pointer; 
-            background: #007BFF; color: white; border: none; border-radius: 5px; margin-right: 10px;
+            padding: 10px 15px; cursor: pointer; border: none; border-radius: 4px;
+            background: #333; color: white; transition: 0.2s;
         }
-        button:hover { background: #0056b3; }
+        button:hover { background: #444; }
+        button.active-btn { background: #007ACC; }
+        
+        .copy-btn { background: #28a745; margin-left: auto; font-weight: bold; }
+        .copy-btn:hover { background: #218838; }
 
-        /* Logic: Hide pages by default */
-        .page { display: none; animation: fadeIn 0.3s; }
-        /* Show the active page */
-        .active { display: block; }
+        /* Code Window */
+        .code-container { background: #000; border: 1px solid #333; border-radius: 8px; padding: 20px; overflow-x: auto; }
+        pre { margin: 0; }
+        code { font-family: 'Consolas', 'Monaco', monospace; line-height: 1.5; color: #9cdcfe; }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        /* Logic */
+        .page { display: none; }
+        .active-page { display: block; }
     </style>
 </head>
 <body>
 
     <nav>
-        <button onclick="showPage('page1')">Page 1</button>
-        <button onclick="showPage('page2')">Page 2</button>
+        <button class="nav-btn active-btn" onclick="showPage('page1', this)">Page 1</button>
+        <button class="nav-btn" onclick="showPage('page2', this)">Page 2</button>
+        <button class="nav-btn" onclick="showPage('page3', this)">Page 3</button>
+        
+        <button class="copy-btn" onclick="copyCode()">Copy Code</button>
     </nav>
 
-    <div id="page1" class="page active">
-        <h1>Welcome to Page 1</h1>
-        <p>{
+    <div class="code-container">
+        <div id="page1" class="page active-page">
+<pre><code>
+{
   "name": "Gens 1",
   "body": "gens",
   "layout": 4,
@@ -52,7 +61,7 @@
       "disabled": false,
       "buyButtonPrice": 100,
       "buyButtonScoreboard": "money",
-      "id": 60323189520
+      "id": 24384225510
     },
     {
       "text": "Grass Block Gen",
@@ -67,7 +76,7 @@
       "disabled": false,
       "buyButtonPrice": 150,
       "buyButtonScoreboard": "money",
-      "id": 55132127773
+      "id": 88288908659
     },
     {
       "text": "Podzol Gen",
@@ -82,7 +91,7 @@
       "disabled": false,
       "buyButtonPrice": 200,
       "buyButtonScoreboard": "money",
-      "id": 71323980294
+      "id": 75033427094
     },
     {
       "text": "Mycelium Gen",
@@ -97,7 +106,7 @@
       "disabled": false,
       "buyButtonPrice": 250,
       "buyButtonScoreboard": "money",
-      "id": 63906301892
+      "id": 23129626490
     },
     {
       "text": "Dirt With Roots Gen",
@@ -112,7 +121,7 @@
       "disabled": false,
       "buyButtonPrice": 300,
       "buyButtonScoreboard": "money",
-      "id": 70262233539
+      "id": 70346730253
     },
     {
       "text": "Sand Gen",
@@ -127,7 +136,7 @@
       "disabled": false,
       "buyButtonPrice": 350,
       "buyButtonScoreboard": "money",
-      "id": 61184884445
+      "id": 91670457199
     },
     {
       "text": "Red Sand Gen",
@@ -142,7 +151,7 @@
       "disabled": false,
       "buyButtonPrice": 400,
       "buyButtonScoreboard": "money",
-      "id": 70407759672
+      "id": 36344491009
     },
     {
       "text": "Gravel Gen",
@@ -157,7 +166,7 @@
       "disabled": false,
       "buyButtonPrice": 450,
       "buyButtonScoreboard": "money",
-      "id": 20454125539
+      "id": 19207800833
     },
     {
       "text": "Clay Gen",
@@ -172,7 +181,7 @@
       "disabled": false,
       "buyButtonPrice": 500,
       "buyButtonScoreboard": "money",
-      "id": 76883244244
+      "id": 40824232590
     },
     {
       "text": "Mud Gen",
@@ -187,7 +196,7 @@
       "disabled": false,
       "buyButtonPrice": 550,
       "buyButtonScoreboard": "money",
-      "id": 55604640909
+      "id": 55359970577
     },
     {
       "text": "Packed Mud Gen",
@@ -202,7 +211,7 @@
       "disabled": false,
       "buyButtonPrice": 600,
       "buyButtonScoreboard": "money",
-      "id": 60677973725
+      "id": 51118536182
     },
     {
       "text": "Mud Bricks Gen",
@@ -217,7 +226,7 @@
       "disabled": false,
       "buyButtonPrice": 650,
       "buyButtonScoreboard": "money",
-      "id": 48635853934
+      "id": 45212915349
     },
     {
       "text": "Moss Block Gen",
@@ -232,7 +241,7 @@
       "disabled": false,
       "buyButtonPrice": 700,
       "buyButtonScoreboard": "money",
-      "id": 41974807717
+      "id": 64720672627
     },
     {
       "text": "Pale Moss Block Gen",
@@ -247,7 +256,7 @@
       "disabled": false,
       "buyButtonPrice": 750,
       "buyButtonScoreboard": "money",
-      "id": 62408843110
+      "id": 72779962592
     },
     {
       "text": "Oak Log Gen",
@@ -262,7 +271,7 @@
       "disabled": false,
       "buyButtonPrice": 800,
       "buyButtonScoreboard": "money",
-      "id": 36437712841
+      "id": 42666792517
     },
     {
       "text": "Spruce Log Gen",
@@ -277,7 +286,7 @@
       "disabled": false,
       "buyButtonPrice": 850,
       "buyButtonScoreboard": "money",
-      "id": 99687084579
+      "id": 36580873457
     },
     {
       "text": "Birch Log Gen",
@@ -292,7 +301,7 @@
       "disabled": false,
       "buyButtonPrice": 900,
       "buyButtonScoreboard": "money",
-      "id": 34004917128
+      "id": 72046424007
     },
     {
       "text": "Jungle Log Gen",
@@ -307,7 +316,7 @@
       "disabled": false,
       "buyButtonPrice": 950,
       "buyButtonScoreboard": "money",
-      "id": 61184723401
+      "id": 36745517693
     },
     {
       "text": "Acacia Log Gen",
@@ -322,7 +331,7 @@
       "disabled": false,
       "buyButtonPrice": 1000,
       "buyButtonScoreboard": "money",
-      "id": 76156899337
+      "id": 31463267961
     },
     {
       "text": "Dark Oak Log Gen",
@@ -337,7 +346,7 @@
       "disabled": false,
       "buyButtonPrice": 1050,
       "buyButtonScoreboard": "money",
-      "id": 24983682979
+      "id": 10514461775
     },
     {
       "text": "Mangrove Log Gen",
@@ -352,7 +361,7 @@
       "disabled": false,
       "buyButtonPrice": 1100,
       "buyButtonScoreboard": "money",
-      "id": 50990348008
+      "id": 26716503461
     },
     {
       "text": "Cherry Log Gen",
@@ -367,7 +376,7 @@
       "disabled": false,
       "buyButtonPrice": 1150,
       "buyButtonScoreboard": "money",
-      "id": 79295915307
+      "id": 54683418593
     },
     {
       "text": "Pale Oak Log Gen",
@@ -382,7 +391,7 @@
       "disabled": false,
       "buyButtonPrice": 1200,
       "buyButtonScoreboard": "money",
-      "id": 57633271521
+      "id": 34316611600
     },
     {
       "text": "Bamboo Block Gen",
@@ -397,7 +406,7 @@
       "disabled": false,
       "buyButtonPrice": 1250,
       "buyButtonScoreboard": "money",
-      "id": 39195908511
+      "id": 30810490012
     },
     {
       "text": "Oak Leaves Gen",
@@ -412,7 +421,7 @@
       "disabled": false,
       "buyButtonPrice": 1300,
       "buyButtonScoreboard": "money",
-      "id": 60707325725
+      "id": 53992503595
     },
     {
       "text": "Stone Gen",
@@ -427,7 +436,7 @@
       "disabled": false,
       "buyButtonPrice": 1350,
       "buyButtonScoreboard": "money",
-      "id": 50261189757
+      "id": 10576234390
     },
     {
       "text": "Andesite Gen",
@@ -442,7 +451,7 @@
       "disabled": false,
       "buyButtonPrice": 1400,
       "buyButtonScoreboard": "money",
-      "id": 73383412603
+      "id": 96257671745
     },
     {
       "text": "Diorite Gen",
@@ -457,7 +466,7 @@
       "disabled": false,
       "buyButtonPrice": 1450,
       "buyButtonScoreboard": "money",
-      "id": 22356388801
+      "id": 11386327705
     },
     {
       "text": "Granite Gen",
@@ -472,7 +481,7 @@
       "disabled": false,
       "buyButtonPrice": 1500,
       "buyButtonScoreboard": "money",
-      "id": 72291916355
+      "id": 36247392908
     },
     {
       "text": "Deepslate Gen",
@@ -487,7 +496,7 @@
       "disabled": false,
       "buyButtonPrice": 1550,
       "buyButtonScoreboard": "money",
-      "id": 35187423674
+      "id": 64362649690
     },
     {
       "text": "Tuff Gen",
@@ -502,7 +511,7 @@
       "disabled": false,
       "buyButtonPrice": 1600,
       "buyButtonScoreboard": "money",
-      "id": 70105221094
+      "id": 76756318003
     },
     {
       "text": "Calcite Gen",
@@ -517,7 +526,7 @@
       "disabled": false,
       "buyButtonPrice": 1650,
       "buyButtonScoreboard": "money",
-      "id": 37354950807
+      "id": 52472931268
     },
     {
       "text": "Coal Ore Gen",
@@ -532,7 +541,7 @@
       "disabled": false,
       "buyButtonPrice": 1700,
       "buyButtonScoreboard": "money",
-      "id": 86663073458
+      "id": 12870322756
     },
     {
       "text": "Deepslate Coal Ore Gen",
@@ -547,7 +556,7 @@
       "disabled": false,
       "buyButtonPrice": 1750,
       "buyButtonScoreboard": "money",
-      "id": 38907457844
+      "id": 49256595918
     },
     {
       "text": "Coal Block Gen",
@@ -562,7 +571,7 @@
       "disabled": false,
       "buyButtonPrice": 1800,
       "buyButtonScoreboard": "money",
-      "id": 61362911364
+      "id": 94075014587
     },
     {
       "text": "Copper Ore Gen",
@@ -577,7 +586,7 @@
       "disabled": false,
       "buyButtonPrice": 1850,
       "buyButtonScoreboard": "money",
-      "id": 87779126326
+      "id": 49369061694
     },
     {
       "text": "Deepslate Copper Ore Gen",
@@ -592,7 +601,7 @@
       "disabled": false,
       "buyButtonPrice": 1900,
       "buyButtonScoreboard": "money",
-      "id": 26700214890
+      "id": 14254450471
     },
     {
       "text": "Copper Block Gen",
@@ -607,7 +616,7 @@
       "disabled": false,
       "buyButtonPrice": 1950,
       "buyButtonScoreboard": "money",
-      "id": 45046216677
+      "id": 20578159424
     },
     {
       "text": "Iron Ore Gen",
@@ -622,7 +631,7 @@
       "disabled": false,
       "buyButtonPrice": 2000,
       "buyButtonScoreboard": "money",
-      "id": 15382417042
+      "id": 58698707514
     },
     {
       "text": "Deepslate Iron Ore Gen",
@@ -637,7 +646,7 @@
       "disabled": false,
       "buyButtonPrice": 2050,
       "buyButtonScoreboard": "money",
-      "id": 46075045351
+      "id": 58214958515
     },
     {
       "text": "Iron Block Gen",
@@ -652,7 +661,7 @@
       "disabled": false,
       "buyButtonPrice": 2100,
       "buyButtonScoreboard": "money",
-      "id": 95935293359
+      "id": 56412319375
     },
     {
       "text": "Gold Ore Gen",
@@ -667,7 +676,7 @@
       "disabled": false,
       "buyButtonPrice": 2150,
       "buyButtonScoreboard": "money",
-      "id": 70435247394
+      "id": 18014058096
     },
     {
       "text": "Deepslate Gold Ore Gen",
@@ -682,7 +691,7 @@
       "disabled": false,
       "buyButtonPrice": 2200,
       "buyButtonScoreboard": "money",
-      "id": 41428759223
+      "id": 81943093481
     },
     {
       "text": "Gold Block Gen",
@@ -697,7 +706,7 @@
       "disabled": false,
       "buyButtonPrice": 2250,
       "buyButtonScoreboard": "money",
-      "id": 58375879360
+      "id": 20975320350
     },
     {
       "text": "Lapis Ore Gen",
@@ -712,7 +721,7 @@
       "disabled": false,
       "buyButtonPrice": 2300,
       "buyButtonScoreboard": "money",
-      "id": 45911294363
+      "id": 99868494325
     },
     {
       "text": "Deepslate Lapis Ore Gen",
@@ -727,7 +736,7 @@
       "disabled": false,
       "buyButtonPrice": 2350,
       "buyButtonScoreboard": "money",
-      "id": 65431290714
+      "id": 89100903291
     },
     {
       "text": "Lapis Block Gen",
@@ -742,7 +751,7 @@
       "disabled": false,
       "buyButtonPrice": 2400,
       "buyButtonScoreboard": "money",
-      "id": 95839988621
+      "id": 40465198390
     },
     {
       "text": "Redstone Ore Gen",
@@ -757,7 +766,7 @@
       "disabled": false,
       "buyButtonPrice": 2450,
       "buyButtonScoreboard": "money",
-      "id": 64903059626
+      "id": 79523066896
     },
     {
       "text": "Deepslate Redstone Ore Gen",
@@ -772,7 +781,7 @@
       "disabled": false,
       "buyButtonPrice": 2500,
       "buyButtonScoreboard": "money",
-      "id": 42313313359
+      "id": 66878271136
     },
     {
       "text": "Redstone Block Gen",
@@ -787,7 +796,7 @@
       "disabled": false,
       "buyButtonPrice": 2550,
       "buyButtonScoreboard": "money",
-      "id": 69802734927
+      "id": 41449916176
     },
     {
       "text": "Diamond Ore Gen",
@@ -802,7 +811,7 @@
       "disabled": false,
       "buyButtonPrice": 2600,
       "buyButtonScoreboard": "money",
-      "id": 24207180535
+      "id": 40728720687
     },
     {
       "text": "Deepslate Diamond Ore Gen",
@@ -817,7 +826,7 @@
       "disabled": false,
       "buyButtonPrice": 2650,
       "buyButtonScoreboard": "money",
-      "id": 47033346369
+      "id": 34169582594
     },
     {
       "text": "Diamond Block Gen",
@@ -832,7 +841,7 @@
       "disabled": false,
       "buyButtonPrice": 2700,
       "buyButtonScoreboard": "money",
-      "id": 98358123676
+      "id": 13261085914
     },
     {
       "text": "Emerald Ore Gen",
@@ -847,7 +856,7 @@
       "disabled": false,
       "buyButtonPrice": 2750,
       "buyButtonScoreboard": "money",
-      "id": 56844594467
+      "id": 46123737646
     },
     {
       "text": "Deepslate Emerald Ore Gen",
@@ -862,7 +871,7 @@
       "disabled": false,
       "buyButtonPrice": 2800,
       "buyButtonScoreboard": "money",
-      "id": 55700490334
+      "id": 18779328497
     },
     {
       "text": "Emerald Block Gen",
@@ -877,7 +886,7 @@
       "disabled": false,
       "buyButtonPrice": 2850,
       "buyButtonScoreboard": "money",
-      "id": 38643365816
+      "id": 20881584980
     },
     {
       "text": "Nether Brick Gen",
@@ -892,7 +901,7 @@
       "disabled": false,
       "buyButtonPrice": 2900,
       "buyButtonScoreboard": "money",
-      "id": 32797712101
+      "id": 81952784374
     },
     {
       "text": "Red Nether Brick Gen",
@@ -907,7 +916,7 @@
       "disabled": false,
       "buyButtonPrice": 2950,
       "buyButtonScoreboard": "money",
-      "id": 30568012714
+      "id": 92263174347
     },
     {
       "text": "Chiseled Nether Bricks Gen",
@@ -922,7 +931,7 @@
       "disabled": false,
       "buyButtonPrice": 3000,
       "buyButtonScoreboard": "money",
-      "id": 27740854650
+      "id": 74401160961
     },
     {
       "text": "Cracked Nether Bricks Gen",
@@ -937,7 +946,7 @@
       "disabled": false,
       "buyButtonPrice": 3050,
       "buyButtonScoreboard": "money",
-      "id": 28196907233
+      "id": 69469590001
     },
     {
       "text": "Blackstone Gen",
@@ -952,7 +961,7 @@
       "disabled": false,
       "buyButtonPrice": 3100,
       "buyButtonScoreboard": "money",
-      "id": 54493697129
+      "id": 29042384760
     },
     {
       "text": "Basalt Gen",
@@ -967,7 +976,7 @@
       "disabled": false,
       "buyButtonPrice": 3150,
       "buyButtonScoreboard": "money",
-      "id": 65782779361
+      "id": 96088170001
     },
     {
       "text": "Magma Gen",
@@ -982,7 +991,7 @@
       "disabled": false,
       "buyButtonPrice": 3200,
       "buyButtonScoreboard": "money",
-      "id": 31120477253
+      "id": 79422566495
     },
     {
       "text": "Soul Sand Gen",
@@ -997,7 +1006,7 @@
       "disabled": false,
       "buyButtonPrice": 3250,
       "buyButtonScoreboard": "money",
-      "id": 30755453345
+      "id": 86107123094
     },
     {
       "text": "Nether Gold Ore Gen",
@@ -1012,7 +1021,7 @@
       "disabled": false,
       "buyButtonPrice": 3300,
       "buyButtonScoreboard": "money",
-      "id": 40939634245
+      "id": 22886867109
     },
     {
       "text": "Quartz Ore Gen",
@@ -1027,7 +1036,7 @@
       "disabled": false,
       "buyButtonPrice": 3350,
       "buyButtonScoreboard": "money",
-      "id": 62219130501
+      "id": 32392670068
     },
     {
       "text": "Quartz Block Gen",
@@ -1042,7 +1051,7 @@
       "disabled": false,
       "buyButtonPrice": 3400,
       "buyButtonScoreboard": "money",
-      "id": 48074643727
+      "id": 57482847015
     },
     {
       "text": "Crimson Stem Gen",
@@ -1057,7 +1066,7 @@
       "disabled": false,
       "buyButtonPrice": 3450,
       "buyButtonScoreboard": "money",
-      "id": 62267233315
+      "id": 24559093424
     },
     {
       "text": "Warped Stem Gen",
@@ -1072,7 +1081,7 @@
       "disabled": false,
       "buyButtonPrice": 3500,
       "buyButtonScoreboard": "money",
-      "id": 25387160181
+      "id": 28318749471
     },
     {
       "text": "Ancient Debris Gen",
@@ -1087,7 +1096,7 @@
       "disabled": false,
       "buyButtonPrice": 3550,
       "buyButtonScoreboard": "money",
-      "id": 41501063833
+      "id": 23098026666
     },
     {
       "text": "Netherite Block Gen",
@@ -1102,7 +1111,7 @@
       "disabled": false,
       "buyButtonPrice": 3600,
       "buyButtonScoreboard": "money",
-      "id": 51248170222
+      "id": 42985681340
     },
     {
       "text": "End Stone Gen",
@@ -1117,7 +1126,7 @@
       "disabled": false,
       "buyButtonPrice": 3650,
       "buyButtonScoreboard": "money",
-      "id": 16049882056
+      "id": 68519239774
     },
     {
       "text": "Purpur Block Gen",
@@ -1132,7 +1141,7 @@
       "disabled": false,
       "buyButtonPrice": 3700,
       "buyButtonScoreboard": "money",
-      "id": 78624452748
+      "id": 22158230281
     },
     {
       "text": "Obsidian Gen",
@@ -1147,7 +1156,7 @@
       "disabled": false,
       "buyButtonPrice": 3750,
       "buyButtonScoreboard": "money",
-      "id": 38573803268
+      "id": 11232411623
     },
     {
       "text": "Crying Obsidian Gen",
@@ -1162,7 +1171,7 @@
       "disabled": false,
       "buyButtonPrice": 3800,
       "buyButtonScoreboard": "money",
-      "id": 86333158574
+      "id": 72341301706
     },
     {
       "text": "Amethyst Block Gen",
@@ -1177,7 +1186,7 @@
       "disabled": false,
       "buyButtonPrice": 3850,
       "buyButtonScoreboard": "money",
-      "id": 13126104891
+      "id": 75487967222
     },
     {
       "text": "Prismarine Gen",
@@ -1192,7 +1201,7 @@
       "disabled": false,
       "buyButtonPrice": 3900,
       "buyButtonScoreboard": "money",
-      "id": 32183882582
+      "id": 21630115730
     },
     {
       "text": "Prismarine Bricks Gen",
@@ -1207,7 +1216,7 @@
       "disabled": false,
       "buyButtonPrice": 3950,
       "buyButtonScoreboard": "money",
-      "id": 21613204391
+      "id": 27933761749
     },
     {
       "text": "Dark Prismarine Gen",
@@ -1222,7 +1231,7 @@
       "disabled": false,
       "buyButtonPrice": 4000,
       "buyButtonScoreboard": "money",
-      "id": 92068668640
+      "id": 25776229820
     },
     {
       "text": "Sea Lantern Gen",
@@ -1237,7 +1246,7 @@
       "disabled": false,
       "buyButtonPrice": 4050,
       "buyButtonScoreboard": "money",
-      "id": 86923176916
+      "id": 75215945735
     }
   ],
   "subuis": {},
@@ -1246,12 +1255,11 @@
   "folder": null,
   "theme": 68,
   "paperdoll": true
-}</p>
-    </div>
+}</code></pre>
+        </div>
 
-    <div id="page2" class="page">
-        <h1>Welcome to Page 2</h1>
-        <p>{
+        <div id="page2" class="page">
+<pre><code>{
   "name": "Gens 2",
   "body": "gens",
   "layout": 4,
@@ -1270,7 +1278,7 @@
       "disabled": false,
       "buyButtonPrice": 4100,
       "buyButtonScoreboard": "money",
-      "id": 21057277164
+      "id": 71312298398
     },
     {
       "text": "Slime Gen",
@@ -1285,7 +1293,7 @@
       "disabled": false,
       "buyButtonPrice": 4150,
       "buyButtonScoreboard": "money",
-      "id": 64224346539
+      "id": 66350284481
     },
     {
       "text": "Honey Block Gen",
@@ -1300,7 +1308,7 @@
       "disabled": false,
       "buyButtonPrice": 4200,
       "buyButtonScoreboard": "money",
-      "id": 58203015304
+      "id": 81476249489
     },
     {
       "text": "Honeycomb Block Gen",
@@ -1315,7 +1323,7 @@
       "disabled": false,
       "buyButtonPrice": 4250,
       "buyButtonScoreboard": "money",
-      "id": 41719060257
+      "id": 42298621422
     },
     {
       "text": "Bone Block Gen",
@@ -1330,7 +1338,7 @@
       "disabled": false,
       "buyButtonPrice": 4300,
       "buyButtonScoreboard": "money",
-      "id": 19058369161
+      "id": 76557114802
     },
     {
       "text": "Sculk Gen",
@@ -1345,7 +1353,7 @@
       "disabled": false,
       "buyButtonPrice": 4350,
       "buyButtonScoreboard": "money",
-      "id": 60776844400
+      "id": 25376217625
     },
     {
       "text": "Web Gen",
@@ -1360,7 +1368,7 @@
       "disabled": false,
       "buyButtonPrice": 4400,
       "buyButtonScoreboard": "money",
-      "id": 24241970287
+      "id": 23970889324
     },
     {
       "text": "Packed Ice Gen",
@@ -1375,7 +1383,7 @@
       "disabled": false,
       "buyButtonPrice": 4450,
       "buyButtonScoreboard": "money",
-      "id": 65313428371
+      "id": 20432761390
     },
     {
       "text": "Resin Block Gen",
@@ -1390,7 +1398,7 @@
       "disabled": false,
       "buyButtonPrice": 4500,
       "buyButtonScoreboard": "money",
-      "id": 87960091909
+      "id": 27854842122
     },
     {
       "text": "Resin Bricks Gen",
@@ -1405,7 +1413,7 @@
       "disabled": false,
       "buyButtonPrice": 4550,
       "buyButtonScoreboard": "money",
-      "id": 38906426717
+      "id": 86092568248
     },
     {
       "text": "Chiseled Resin Bricks Gen",
@@ -1420,7 +1428,7 @@
       "disabled": false,
       "buyButtonPrice": 4600,
       "buyButtonScoreboard": "money",
-      "id": 66082688740
+      "id": 61623060977
     },
     {
       "text": "Mob Spawner Gen",
@@ -1435,7 +1443,7 @@
       "disabled": false,
       "buyButtonPrice": 4650,
       "buyButtonScoreboard": "money",
-      "id": 14428678393
+      "id": 15630644076
     },
     {
       "text": "Beacon Gen",
@@ -1450,7 +1458,7 @@
       "disabled": false,
       "buyButtonPrice": 4700,
       "buyButtonScoreboard": "money",
-      "id": 90702557140
+      "id": 51282390611
     },
     {
       "text": "Lodestone Gen",
@@ -1465,7 +1473,7 @@
       "disabled": false,
       "buyButtonPrice": 4750,
       "buyButtonScoreboard": "money",
-      "id": 19456905983
+      "id": 40155225799
     },
     {
       "text": "Hardened Clay Gen",
@@ -1480,7 +1488,7 @@
       "disabled": false,
       "buyButtonPrice": 4800,
       "buyButtonScoreboard": "money",
-      "id": 75314318955
+      "id": 49334491185
     },
     {
       "text": "White Terracotta Gen",
@@ -1495,7 +1503,7 @@
       "disabled": false,
       "buyButtonPrice": 4850,
       "buyButtonScoreboard": "money",
-      "id": 19077257773
+      "id": 40407855707
     },
     {
       "text": "Orange Terracotta Gen",
@@ -1510,7 +1518,7 @@
       "disabled": false,
       "buyButtonPrice": 4900,
       "buyButtonScoreboard": "money",
-      "id": 65821446228
+      "id": 73104470980
     },
     {
       "text": "Magenta Terracotta Gen",
@@ -1525,7 +1533,7 @@
       "disabled": false,
       "buyButtonPrice": 4950,
       "buyButtonScoreboard": "money",
-      "id": 80965575757
+      "id": 72090705506
     },
     {
       "text": "Light Blue Terracotta Gen",
@@ -1540,7 +1548,7 @@
       "disabled": false,
       "buyButtonPrice": 5000,
       "buyButtonScoreboard": "money",
-      "id": 38178617050
+      "id": 99629945144
     },
     {
       "text": "Yellow Terracotta Gen",
@@ -1555,7 +1563,7 @@
       "disabled": false,
       "buyButtonPrice": 5050,
       "buyButtonScoreboard": "money",
-      "id": 60396429883
+      "id": 19218102479
     },
     {
       "text": "Lime Terracotta Gen",
@@ -1570,7 +1578,7 @@
       "disabled": false,
       "buyButtonPrice": 5100,
       "buyButtonScoreboard": "money",
-      "id": 91560714619
+      "id": 75852678951
     },
     {
       "text": "Pink Terracotta Gen",
@@ -1585,7 +1593,7 @@
       "disabled": false,
       "buyButtonPrice": 5150,
       "buyButtonScoreboard": "money",
-      "id": 16215854530
+      "id": 12258042908
     },
     {
       "text": "Gray Terracotta Gen",
@@ -1600,7 +1608,7 @@
       "disabled": false,
       "buyButtonPrice": 5200,
       "buyButtonScoreboard": "money",
-      "id": 71449834975
+      "id": 76143833799
     },
     {
       "text": "Light Gray Terracotta Gen",
@@ -1615,7 +1623,7 @@
       "disabled": false,
       "buyButtonPrice": 5250,
       "buyButtonScoreboard": "money",
-      "id": 75266796530
+      "id": 39347955206
     },
     {
       "text": "Cyan Terracotta Gen",
@@ -1630,7 +1638,7 @@
       "disabled": false,
       "buyButtonPrice": 5300,
       "buyButtonScoreboard": "money",
-      "id": 81463008266
+      "id": 76558005832
     },
     {
       "text": "Purple Terracotta Gen",
@@ -1645,7 +1653,7 @@
       "disabled": false,
       "buyButtonPrice": 5350,
       "buyButtonScoreboard": "money",
-      "id": 86349136469
+      "id": 30718731097
     },
     {
       "text": "Blue Terracotta Gen",
@@ -1660,7 +1668,7 @@
       "disabled": false,
       "buyButtonPrice": 5400,
       "buyButtonScoreboard": "money",
-      "id": 70121677654
+      "id": 34104364631
     },
     {
       "text": "Brown Terracotta Gen",
@@ -1675,7 +1683,7 @@
       "disabled": false,
       "buyButtonPrice": 5450,
       "buyButtonScoreboard": "money",
-      "id": 17494407869
+      "id": 82962201418
     },
     {
       "text": "Green Terracotta Gen",
@@ -1690,7 +1698,7 @@
       "disabled": false,
       "buyButtonPrice": 5500,
       "buyButtonScoreboard": "money",
-      "id": 93552143472
+      "id": 25605403128
     },
     {
       "text": "Red Terracotta Gen",
@@ -1705,7 +1713,7 @@
       "disabled": false,
       "buyButtonPrice": 5550,
       "buyButtonScoreboard": "money",
-      "id": 57895134313
+      "id": 27090988467
     },
     {
       "text": "Black Terracotta Gen",
@@ -1720,7 +1728,7 @@
       "disabled": false,
       "buyButtonPrice": 5600,
       "buyButtonScoreboard": "money",
-      "id": 38932092070
+      "id": 11674586243
     },
     {
       "text": "White Glazed Terracotta Gen",
@@ -1735,7 +1743,7 @@
       "disabled": false,
       "buyButtonPrice": 5650,
       "buyButtonScoreboard": "money",
-      "id": 27751147670
+      "id": 29672898923
     },
     {
       "text": "Orange Glazed Terracotta Gen",
@@ -1750,7 +1758,7 @@
       "disabled": false,
       "buyButtonPrice": 5700,
       "buyButtonScoreboard": "money",
-      "id": 38605542114
+      "id": 95376112794
     },
     {
       "text": "Magenta Glazed Terracotta Gen",
@@ -1765,7 +1773,7 @@
       "disabled": false,
       "buyButtonPrice": 5750,
       "buyButtonScoreboard": "money",
-      "id": 32938547256
+      "id": 71534086817
     },
     {
       "text": "Light Blue Glazed Terracotta Gen",
@@ -1780,7 +1788,7 @@
       "disabled": false,
       "buyButtonPrice": 5800,
       "buyButtonScoreboard": "money",
-      "id": 23586817629
+      "id": 22733796163
     },
     {
       "text": "Yellow Glazed Terracotta Gen",
@@ -1795,7 +1803,7 @@
       "disabled": false,
       "buyButtonPrice": 5850,
       "buyButtonScoreboard": "money",
-      "id": 10365808173
+      "id": 19515375735
     },
     {
       "text": "Lime Glazed Terracotta Gen",
@@ -1810,7 +1818,7 @@
       "disabled": false,
       "buyButtonPrice": 5900,
       "buyButtonScoreboard": "money",
-      "id": 69134853288
+      "id": 47092388020
     },
     {
       "text": "Pink Glazed Terracotta Gen",
@@ -1825,7 +1833,7 @@
       "disabled": false,
       "buyButtonPrice": 5950,
       "buyButtonScoreboard": "money",
-      "id": 49393296576
+      "id": 64121189989
     },
     {
       "text": "Gray Glazed Terracotta Gen",
@@ -1840,7 +1848,7 @@
       "disabled": false,
       "buyButtonPrice": 6000,
       "buyButtonScoreboard": "money",
-      "id": 85578427718
+      "id": 39846173117
     },
     {
       "text": "Silver Glazed Terracotta Gen",
@@ -1855,7 +1863,7 @@
       "disabled": false,
       "buyButtonPrice": 6050,
       "buyButtonScoreboard": "money",
-      "id": 30530810534
+      "id": 27499887043
     },
     {
       "text": "Cyan Glazed Terracotta Gen",
@@ -1870,7 +1878,7 @@
       "disabled": false,
       "buyButtonPrice": 6100,
       "buyButtonScoreboard": "money",
-      "id": 42486143638
+      "id": 78758834011
     },
     {
       "text": "Purple Glazed Terracotta Gen",
@@ -1885,7 +1893,7 @@
       "disabled": false,
       "buyButtonPrice": 6150,
       "buyButtonScoreboard": "money",
-      "id": 43218266285
+      "id": 79064111003
     },
     {
       "text": "Blue Glazed Terracotta Gen",
@@ -1900,7 +1908,7 @@
       "disabled": false,
       "buyButtonPrice": 6200,
       "buyButtonScoreboard": "money",
-      "id": 25405651521
+      "id": 84708738906
     },
     {
       "text": "Brown Glazed Terracotta Gen",
@@ -1915,7 +1923,7 @@
       "disabled": false,
       "buyButtonPrice": 6250,
       "buyButtonScoreboard": "money",
-      "id": 27618999082
+      "id": 35514019023
     },
     {
       "text": "Green Glazed Terracotta Gen",
@@ -1930,7 +1938,7 @@
       "disabled": false,
       "buyButtonPrice": 6300,
       "buyButtonScoreboard": "money",
-      "id": 39905672827
+      "id": 64420017024
     },
     {
       "text": "Red Glazed Terracotta Gen",
@@ -1945,7 +1953,7 @@
       "disabled": false,
       "buyButtonPrice": 6350,
       "buyButtonScoreboard": "money",
-      "id": 88495578688
+      "id": 44709701613
     },
     {
       "text": "Black Glazed Terracotta Gen",
@@ -1960,7 +1968,7 @@
       "disabled": false,
       "buyButtonPrice": 6400,
       "buyButtonScoreboard": "money",
-      "id": 80786022564
+      "id": 15116826618
     },
     {
       "text": "White Concrete Powder Gen",
@@ -1975,7 +1983,7 @@
       "disabled": false,
       "buyButtonPrice": 6450,
       "buyButtonScoreboard": "money",
-      "id": 67067019304
+      "id": 99757058887
     },
     {
       "text": "Orange Concrete Powder Gen",
@@ -1990,7 +1998,7 @@
       "disabled": false,
       "buyButtonPrice": 6500,
       "buyButtonScoreboard": "money",
-      "id": 40245133696
+      "id": 32983342470
     },
     {
       "text": "Magenta Concrete Powder Gen",
@@ -2005,7 +2013,7 @@
       "disabled": false,
       "buyButtonPrice": 6550,
       "buyButtonScoreboard": "money",
-      "id": 46977282990
+      "id": 56162973003
     },
     {
       "text": "Light Blue Concrete Powder Gen",
@@ -2020,7 +2028,7 @@
       "disabled": false,
       "buyButtonPrice": 6600,
       "buyButtonScoreboard": "money",
-      "id": 92218676526
+      "id": 58529745340
     },
     {
       "text": "Yellow Concrete Powder Gen",
@@ -2035,7 +2043,7 @@
       "disabled": false,
       "buyButtonPrice": 6650,
       "buyButtonScoreboard": "money",
-      "id": 21892184521
+      "id": 29129453495
     },
     {
       "text": "Lime Concrete Powder Gen",
@@ -2050,7 +2058,7 @@
       "disabled": false,
       "buyButtonPrice": 6700,
       "buyButtonScoreboard": "money",
-      "id": 37432753861
+      "id": 78161248040
     },
     {
       "text": "Pink Concrete Powder Gen",
@@ -2065,7 +2073,7 @@
       "disabled": false,
       "buyButtonPrice": 6750,
       "buyButtonScoreboard": "money",
-      "id": 19692522207
+      "id": 76369485968
     },
     {
       "text": "Gray Concrete Powder Gen",
@@ -2080,7 +2088,7 @@
       "disabled": false,
       "buyButtonPrice": 6800,
       "buyButtonScoreboard": "money",
-      "id": 80903207300
+      "id": 74751369517
     },
     {
       "text": "Light Gray Concrete Powder Gen",
@@ -2095,7 +2103,7 @@
       "disabled": false,
       "buyButtonPrice": 6850,
       "buyButtonScoreboard": "money",
-      "id": 55144715342
+      "id": 46932439377
     },
     {
       "text": "Cyan Concrete Powder Gen",
@@ -2110,7 +2118,7 @@
       "disabled": false,
       "buyButtonPrice": 6900,
       "buyButtonScoreboard": "money",
-      "id": 83114691418
+      "id": 43574299247
     },
     {
       "text": "Purple Concrete Powder Gen",
@@ -2125,7 +2133,7 @@
       "disabled": false,
       "buyButtonPrice": 6950,
       "buyButtonScoreboard": "money",
-      "id": 76784081425
+      "id": 88880718606
     },
     {
       "text": "Blue Concrete Powder Gen",
@@ -2140,7 +2148,7 @@
       "disabled": false,
       "buyButtonPrice": 7000,
       "buyButtonScoreboard": "money",
-      "id": 35784431668
+      "id": 10140368732
     },
     {
       "text": "Brown Concrete Powder Gen",
@@ -2155,7 +2163,7 @@
       "disabled": false,
       "buyButtonPrice": 7050,
       "buyButtonScoreboard": "money",
-      "id": 95310752304
+      "id": 34312783913
     },
     {
       "text": "Green Concrete Powder Gen",
@@ -2170,7 +2178,7 @@
       "disabled": false,
       "buyButtonPrice": 7100,
       "buyButtonScoreboard": "money",
-      "id": 49768077150
+      "id": 51984501939
     },
     {
       "text": "Red Concrete Powder Gen",
@@ -2185,7 +2193,7 @@
       "disabled": false,
       "buyButtonPrice": 7150,
       "buyButtonScoreboard": "money",
-      "id": 94154908581
+      "id": 68190937741
     },
     {
       "text": "Black Concrete Powder Gen",
@@ -2200,7 +2208,7 @@
       "disabled": false,
       "buyButtonPrice": 7200,
       "buyButtonScoreboard": "money",
-      "id": 92903144676
+      "id": 78574962532
     },
     {
       "text": "White Concrete Gen",
@@ -2215,7 +2223,7 @@
       "disabled": false,
       "buyButtonPrice": 7250,
       "buyButtonScoreboard": "money",
-      "id": 98459355678
+      "id": 65715351820
     },
     {
       "text": "Orange Concrete Gen",
@@ -2230,7 +2238,7 @@
       "disabled": false,
       "buyButtonPrice": 7300,
       "buyButtonScoreboard": "money",
-      "id": 89730294962
+      "id": 85256026681
     },
     {
       "text": "Magenta Concrete Gen",
@@ -2245,7 +2253,7 @@
       "disabled": false,
       "buyButtonPrice": 7350,
       "buyButtonScoreboard": "money",
-      "id": 50637739456
+      "id": 47354887010
     },
     {
       "text": "Light Blue Concrete Gen",
@@ -2260,7 +2268,7 @@
       "disabled": false,
       "buyButtonPrice": 7400,
       "buyButtonScoreboard": "money",
-      "id": 49411090344
+      "id": 79971648380
     },
     {
       "text": "Yellow Concrete Gen",
@@ -2275,7 +2283,7 @@
       "disabled": false,
       "buyButtonPrice": 7450,
       "buyButtonScoreboard": "money",
-      "id": 32550604968
+      "id": 63036598171
     },
     {
       "text": "Lime Concrete Gen",
@@ -2290,7 +2298,7 @@
       "disabled": false,
       "buyButtonPrice": 7500,
       "buyButtonScoreboard": "money",
-      "id": 95126950162
+      "id": 48138944703
     },
     {
       "text": "Pink Concrete Gen",
@@ -2305,7 +2313,7 @@
       "disabled": false,
       "buyButtonPrice": 7550,
       "buyButtonScoreboard": "money",
-      "id": 50996760210
+      "id": 16772920893
     },
     {
       "text": "Gray Concrete Gen",
@@ -2320,7 +2328,7 @@
       "disabled": false,
       "buyButtonPrice": 7600,
       "buyButtonScoreboard": "money",
-      "id": 36844241661
+      "id": 52526787550
     },
     {
       "text": "Light Gray Concrete Gen",
@@ -2335,7 +2343,7 @@
       "disabled": false,
       "buyButtonPrice": 7650,
       "buyButtonScoreboard": "money",
-      "id": 87111265647
+      "id": 48090610191
     },
     {
       "text": "Cyan Concrete Gen",
@@ -2350,7 +2358,7 @@
       "disabled": false,
       "buyButtonPrice": 7700,
       "buyButtonScoreboard": "money",
-      "id": 87218377907
+      "id": 85867755416
     },
     {
       "text": "Purple Concrete Gen",
@@ -2365,7 +2373,7 @@
       "disabled": false,
       "buyButtonPrice": 7750,
       "buyButtonScoreboard": "money",
-      "id": 90171948403
+      "id": 30456879684
     },
     {
       "text": "Blue Concrete Gen",
@@ -2380,7 +2388,7 @@
       "disabled": false,
       "buyButtonPrice": 7800,
       "buyButtonScoreboard": "money",
-      "id": 38482051052
+      "id": 62915332174
     },
     {
       "text": "Brown Concrete Gen",
@@ -2395,7 +2403,7 @@
       "disabled": false,
       "buyButtonPrice": 7850,
       "buyButtonScoreboard": "money",
-      "id": 22383951646
+      "id": 97352338666
     },
     {
       "text": "Green Concrete Gen",
@@ -2410,7 +2418,7 @@
       "disabled": false,
       "buyButtonPrice": 7900,
       "buyButtonScoreboard": "money",
-      "id": 32245809065
+      "id": 38917985666
     },
     {
       "text": "Red Concrete Gen",
@@ -2425,7 +2433,7 @@
       "disabled": false,
       "buyButtonPrice": 7950,
       "buyButtonScoreboard": "money",
-      "id": 69087460333
+      "id": 33750819556
     },
     {
       "text": "Black Concrete Gen",
@@ -2440,7 +2448,7 @@
       "disabled": false,
       "buyButtonPrice": 8000,
       "buyButtonScoreboard": "money",
-      "id": 86489939675
+      "id": 39304838710
     },
     {
       "text": "White Wool Gen",
@@ -2455,7 +2463,7 @@
       "disabled": false,
       "buyButtonPrice": 8050,
       "buyButtonScoreboard": "money",
-      "id": 68839118608
+      "id": 41047148679
     },
     {
       "text": "Orange Wool Gen",
@@ -2470,7 +2478,7 @@
       "disabled": false,
       "buyButtonPrice": 8100,
       "buyButtonScoreboard": "money",
-      "id": 95921452921
+      "id": 84755699227
     },
     {
       "text": "Magenta Wool Gen",
@@ -2485,7 +2493,7 @@
       "disabled": false,
       "buyButtonPrice": 8150,
       "buyButtonScoreboard": "money",
-      "id": 17510662889
+      "id": 52724596060
     },
     {
       "text": "Light Blue Wool Gen",
@@ -2500,7 +2508,7 @@
       "disabled": false,
       "buyButtonPrice": 8200,
       "buyButtonScoreboard": "money",
-      "id": 48695782110
+      "id": 46693070450
     },
     {
       "text": "Yellow Wool Gen",
@@ -2515,7 +2523,7 @@
       "disabled": false,
       "buyButtonPrice": 8250,
       "buyButtonScoreboard": "money",
-      "id": 87263879055
+      "id": 91130464036
     },
     {
       "text": "Lime Wool Gen",
@@ -2530,7 +2538,7 @@
       "disabled": false,
       "buyButtonPrice": 8300,
       "buyButtonScoreboard": "money",
-      "id": 86454780954
+      "id": 61078077425
     },
     {
       "text": "Pink Wool Gen",
@@ -2545,7 +2553,7 @@
       "disabled": false,
       "buyButtonPrice": 8350,
       "buyButtonScoreboard": "money",
-      "id": 52884093635
+      "id": 48448690695
     },
     {
       "text": "Gray Wool Gen",
@@ -2560,7 +2568,7 @@
       "disabled": false,
       "buyButtonPrice": 8400,
       "buyButtonScoreboard": "money",
-      "id": 62198477037
+      "id": 31240803242
     },
     {
       "text": "Light Gray Wool Gen",
@@ -2575,7 +2583,7 @@
       "disabled": false,
       "buyButtonPrice": 8450,
       "buyButtonScoreboard": "money",
-      "id": 34372474945
+      "id": 62804556288
     },
     {
       "text": "Cyan Wool Gen",
@@ -2590,7 +2598,7 @@
       "disabled": false,
       "buyButtonPrice": 8500,
       "buyButtonScoreboard": "money",
-      "id": 99526521833
+      "id": 74253249104
     },
     {
       "text": "Purple Wool Gen",
@@ -2605,7 +2613,7 @@
       "disabled": false,
       "buyButtonPrice": 8550,
       "buyButtonScoreboard": "money",
-      "id": 47768569029
+      "id": 78116390356
     },
     {
       "text": "Blue Wool Gen",
@@ -2620,7 +2628,7 @@
       "disabled": false,
       "buyButtonPrice": 8600,
       "buyButtonScoreboard": "money",
-      "id": 83230827298
+      "id": 24341329954
     },
     {
       "text": "Brown Wool Gen",
@@ -2635,8 +2643,25 @@
       "disabled": false,
       "buyButtonPrice": 8650,
       "buyButtonScoreboard": "money",
-      "id": 31776864797
-    },
+      "id": 69483819880
+    }
+  ],
+  "subuis": {},
+  "scriptevent": "Gens2",
+  "cancel": "",
+  "folder": null,
+  "theme": 68,
+  "paperdoll": true
+}</code></pre>
+        </div>
+
+        <div id="page3" class="page">
+<pre><code>{
+  "name": "Gens 3",
+  "body": "gens",
+  "layout": 4,
+  "type": 0,
+  "buttons": [
     {
       "text": "Green Wool Gen",
       "subtext": "$8,700",
@@ -2650,7 +2675,7 @@
       "disabled": false,
       "buyButtonPrice": 8700,
       "buyButtonScoreboard": "money",
-      "id": 54178304416
+      "id": 85113561824
     },
     {
       "text": "Red Wool Gen",
@@ -2665,7 +2690,7 @@
       "disabled": false,
       "buyButtonPrice": 8750,
       "buyButtonScoreboard": "money",
-      "id": 46530665737
+      "id": 60542414050
     },
     {
       "text": "Black Wool Gen",
@@ -2680,7 +2705,7 @@
       "disabled": false,
       "buyButtonPrice": 8800,
       "buyButtonScoreboard": "money",
-      "id": 32707902588
+      "id": 62745229104
     },
     {
       "text": "Undyed Shulker Box Gen",
@@ -2695,7 +2720,7 @@
       "disabled": false,
       "buyButtonPrice": 8850,
       "buyButtonScoreboard": "money",
-      "id": 11144145890
+      "id": 51625401367
     },
     {
       "text": "White Shulker Box Gen",
@@ -2710,7 +2735,7 @@
       "disabled": false,
       "buyButtonPrice": 8900,
       "buyButtonScoreboard": "money",
-      "id": 82405520849
+      "id": 20374568168
     },
     {
       "text": "Orange Shulker Box Gen",
@@ -2725,7 +2750,7 @@
       "disabled": false,
       "buyButtonPrice": 8950,
       "buyButtonScoreboard": "money",
-      "id": 70020110669
+      "id": 34968832240
     },
     {
       "text": "Magenta Shulker Box Gen",
@@ -2740,7 +2765,7 @@
       "disabled": false,
       "buyButtonPrice": 9000,
       "buyButtonScoreboard": "money",
-      "id": 59282792095
+      "id": 83789278902
     },
     {
       "text": "Light Blue Shulker Box Gen",
@@ -2755,7 +2780,7 @@
       "disabled": false,
       "buyButtonPrice": 9050,
       "buyButtonScoreboard": "money",
-      "id": 25963131384
+      "id": 28737232436
     },
     {
       "text": "Yellow Shulker Box Gen",
@@ -2770,7 +2795,7 @@
       "disabled": false,
       "buyButtonPrice": 9100,
       "buyButtonScoreboard": "money",
-      "id": 41280406050
+      "id": 70330389586
     },
     {
       "text": "Lime Shulker Box Gen",
@@ -2785,7 +2810,7 @@
       "disabled": false,
       "buyButtonPrice": 9150,
       "buyButtonScoreboard": "money",
-      "id": 15918606729
+      "id": 25113817693
     },
     {
       "text": "Pink Shulker Box Gen",
@@ -2800,7 +2825,7 @@
       "disabled": false,
       "buyButtonPrice": 9200,
       "buyButtonScoreboard": "money",
-      "id": 71886860695
+      "id": 43814523014
     },
     {
       "text": "Gray Shulker Box Gen",
@@ -2815,7 +2840,7 @@
       "disabled": false,
       "buyButtonPrice": 9250,
       "buyButtonScoreboard": "money",
-      "id": 42688714091
+      "id": 12439784385
     },
     {
       "text": "Light Gray Shulker Box Gen",
@@ -2830,7 +2855,7 @@
       "disabled": false,
       "buyButtonPrice": 9300,
       "buyButtonScoreboard": "money",
-      "id": 25836222663
+      "id": 64196570957
     },
     {
       "text": "Cyan Shulker Box Gen",
@@ -2845,7 +2870,7 @@
       "disabled": false,
       "buyButtonPrice": 9350,
       "buyButtonScoreboard": "money",
-      "id": 92905800373
+      "id": 96857307519
     },
     {
       "text": "Purple Shulker Box Gen",
@@ -2860,7 +2885,7 @@
       "disabled": false,
       "buyButtonPrice": 9400,
       "buyButtonScoreboard": "money",
-      "id": 83030573568
+      "id": 43218294805
     },
     {
       "text": "Blue Shulker Box Gen",
@@ -2875,7 +2900,7 @@
       "disabled": false,
       "buyButtonPrice": 9450,
       "buyButtonScoreboard": "money",
-      "id": 62852724781
+      "id": 38452434629
     },
     {
       "text": "Brown Shulker Box Gen",
@@ -2890,7 +2915,7 @@
       "disabled": false,
       "buyButtonPrice": 9500,
       "buyButtonScoreboard": "money",
-      "id": 78316666302
+      "id": 60203373567
     },
     {
       "text": "Green Shulker Box Gen",
@@ -2905,7 +2930,7 @@
       "disabled": false,
       "buyButtonPrice": 9550,
       "buyButtonScoreboard": "money",
-      "id": 24777753397
+      "id": 19161091346
     },
     {
       "text": "Red Shulker Box Gen",
@@ -2920,7 +2945,7 @@
       "disabled": false,
       "buyButtonPrice": 9600,
       "buyButtonScoreboard": "money",
-      "id": 17456230220
+      "id": 87772166753
     },
     {
       "text": "Black Shulker Box Gen",
@@ -2935,26 +2960,42 @@
       "disabled": false,
       "buyButtonPrice": 9650,
       "buyButtonScoreboard": "money",
-      "id": 46716803030
+      "id": 46825440700
     }
   ],
   "subuis": {},
-  "scriptevent": "Gens2",
+  "scriptevent": "Gens3",
   "cancel": "",
   "folder": null,
   "theme": 68,
   "paperdoll": true
-}</p>
+}</code></pre>
+        </div>
     </div>
 
     <script>
-        function showPage(pageId) {
-            // Hide all elements with the class "page"
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active'));
+        function showPage(pageId, btn) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+            // Deactivate all buttons
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active-btn'));
             
-            // Show the specific page that was clicked
-            document.getElementById(pageId).classList.add('active');
+            // Show selected
+            document.getElementById(pageId).classList.add('active-page');
+            btn.classList.add('active-btn');
+        }
+
+        function copyCode() {
+            // Find the currently visible code
+            const activePage = document.querySelector('.active-page code');
+            const text = activePage.innerText;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const copyBtn = document.querySelector('.copy-btn');
+                const originalText = copyBtn.innerText;
+                copyBtn.innerText = "Copied!";
+                setTimeout(() => copyBtn.innerText = originalText, 2000);
+            });
         }
     </script>
 
